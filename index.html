@@ -128,10 +128,10 @@
                       <img src="images/mit_latest.jpeg" alt="" width="140" height="180" style="display: inline-block;">
                     </header>
                     <p><br/>I am Mithil Gaonkar, Previously a Data Scientist at Bosch, currently pursuing a Master's in Data Science.<br/>
-                        I achieved a rank in the top 2% All India Rank for the GATE Computer Science exam, a highly competitive test for students preparing for a Master's degree in Computer Science."
+                        I ranked in the top 2% All India Rank for the GATE Computer Science exam, a highly competitive test for students preparing for a Master's degree in Computer Science.
                         Known for my curious and analytical mind, I possess a keen eye for detail, often uncovering nuanced insights in data that others may overlook. This passion for working with data led me to pursue a Master's in Data Science at the University at Buffalo, where I am currently enrolled.<br/>
                         During my academic journey, I delved deep into various machine learning and Deep Learning techniques, honing my skills in building end-end Machine Learning Pipelines. Additionally, I served as a Teaching Assistant, mentoring 240 students in designing BCNF-compliant relational database systems, optimizing PostgreSQL query execution by analyzing problematic queries and improving search efficiency through indexing.<br/>
-                        Currently, I am seeking opportunities that allow me to leverage my extensive Machine Learning background alongside my newfound expertise in LLM's, propelling my career to new heights.</p>
+                        I am seeking opportunities to leverage my extensive Machine Learning background alongside my newfound expertise in LLM's, propelling my career to new heights.</p>
                 </div>
             </section>
 
@@ -244,7 +244,7 @@
             <img src="images/Doc_class_CNN.jpeg" alt="Project 2">
             <h3>Low Latency Text Document Classifier Using CNN. </h3>
             <p>Implemented a document classifier using CNN architecture, capable of categorizing 18,828 text documents into 20 classes(doc formats) with latency less than 0.4ms leveraging pre-trained Glove and char-level embeddings </p>
-            <p>Model 1: Word embeddings are based on pre-trained Glove vector where each embedding has size of 300 dimensions.
+            <p>Model 1: Word embeddings are based on a pre-trained Glove vector where each embedding has a size of 300 dimensions.
                Model 2: Char CNN char embeddings are based on pre-trained char embeddings which can be downloaded</p>
             <div class="tags">
                 <span class="tag-python">Python</span>
@@ -258,7 +258,7 @@
         </div>
         <div class="project">
             <img src="images/vqa.png" alt="Project 3">
-            <h3> Multi-Modal learning for Visual Question Answering.</h3>
+            <h3> Multi-Modal Learning for Visual Question Answering.</h3>
             <p> Developed a Multi-modal solution to answer open-ended questions about images; Implemented a vanilla Visual Question Answering (VQA) model following the initial VQA paper, attaining impressive accuracy with low latency. 
                 Experimented with LLM, BERT, and LSTM with Glove embeddings for text encoding, Vgg-16, ResNet-50, and custom Densenet model for image encoding, elevating performance by 10% compared to the benchmark model. Performed extensive Exploratory Data Analysis on Input Questions (Text Data) deriving key information and Conducted analysis on Images, finding aspect ratio, number of channels and pixel intensity of the images. </p>
             <div class="tags">
@@ -275,7 +275,7 @@
         <div class="project">
             <img src="images/ab-testing.png" alt="Project 4">
             <h3> Marketing Advertisement Experimentation.</h3>
-            <p> Business Objective : As a product data scientist at a leading marketing firm, goal is to meticulously design, execute, and analyze an A/B experiment that pits a traditional product advertisement against a Public Service Announcement (PSA).</p>
+            <p> Business Objective: As a product data scientist at a leading marketing firm, goal is to meticulously design, execute, and analyze an A/B experiment that pits a traditional product advertisement against a Public Service Announcement (PSA).</p>
             <p> Implemented A/B testing to gauge the relative effectiveness of advertisements versus public announcements on consumer conversion rates. Identified conversion trends like peak days and hours-for-ads through detailed data analysis and visualization. Conducted chi-squared and confidence interval tests to confirm statistical significance, and calculated the sample size for 80% power, achieving a 31.2% uplift in conversion rate.</p>
             <div class="tags">
                 <span class="tag-python"> AB Testing </span>
@@ -299,7 +299,7 @@
                 <span class="tag-algorithms"> Deep Learning </span>
                 <span class="tag-ds"> Audio Data</span>
                 <span class="tag-eda"> LSTM </span>
-                <span class="tag-stats"> Multi class classification </span>
+                <span class="tag-stats"> Multi-class classification </span>
                 <span class="tag-individual"> Group</span>
                 <span class="tag-academic"> Academic </span>
             </div>
@@ -309,7 +309,7 @@
             <h3> Multivariate Oil Prices Forecasting. </h3>
             <p> </p>
             <p> Led a team of 4 to create ETS, Holt-Winters, and ARIMA time series models to predict oil prices from non-stationary time series, conduct ADF tests for stationarity, and implement moving average-based missing value imputation.
-                Performed Exploratory Data Analysis to find trend and seasonality of the time-series. Infact, decompostion plot revealed seasonality in time-series. Moreover, first order differencing resulted in stationary time-series. Residual analysis to check model adequacy and used QQ plot to check if residuals are normally distributed.
+                Performed Exploratory Data Analysis to find trend and seasonality of the time series. In fact, the decomposition plot revealed seasonality in time-series. Moreover, first order differencing resulted in stationary time-series. Residual analysis to check model adequacy and used QQ plot to check if residuals are normally distributed.
                 Based on RMSE and visual assessment of the forecast plots, the ARIMA(1,1,1) model was chosen for its superior performance in forecasting oil prices.
             </p>
             <div class="tags">
@@ -324,7 +324,7 @@
         <div class="project">
             <img src="images/taxi_demand.png" alt="Project 7">
             <h3>Taxi Demand Prediction</h3>
-            <p> Goal is to predict the demand of the taxi, given a pickup location (longitude and latitude). Boosted model pipeline efficiency using Dask for distributed computing, handling large datasets over 20 GB.
+            <p> Goal is to predict the demand for the taxi, given a pickup location (longitude and latitude). Boosted model pipeline efficiency using Dask for distributed computing, handling large datasets over 20 GB.
                 <p></p>
                 Performed Extensive Exploratory Data analysis on the DataFrame using Dask's lazy evaluation method.
                 Enhanced feature engineering with statistical tests and K-Means clustering for pickup locations based on longitude and latitude, optimized by Silhouette score. Moreover, used Bayesian hyper-opt technique to tune the hyperparameters. Trained an XGBoost and Random Forest Regressor on the data resulting in best test MAPE of 1.02
@@ -346,11 +346,11 @@
             <img src="images/TL.png" alt="Project 8">
             <h3>Transfer Learning using VGG16</h3>
             <p> Applied the concepts learned in the Transfer Learning using VGG16. Trained three models :
-                <li> Using VGG-16 pretrained network without Fully Connected layers and initilize all the weights with Imagenet trained weights. </li> 
-                <li> After VGG-16 network without FC layers, adding a new Conv block, 2 FC layers and an output layer to classify 16 classes. </li> 
-                <li> Final architecture will be INPUT, VGG-16 without Top layers(FC), Conv Layer, Maxpool Layer, 2 FC layers and a Output Layer. </li> 
+                <li> Using VGG-16 pre-trained network without Fully Connected layers and initialize all the weights with Imagenet trained weights. </li> 
+                <li> After the VGG-16 network without FC layers, adding a new Conv block, 2 FC layers, and an output layer to classify 16 classes. </li> 
+                <li> Final architecture will be INPUT, VGG-16 without Top layers(FC), Conv Layer, Maxpool Layer, 2 FC layers, and an Output Layer. </li> 
                 Summary after training the models:
-                No. of trainable parameters for model3 > model2 > model1. Validation accuracy for model2 and model1 is more or less same, Since we used pretrained Vgg16 model without training its params.
+                No. of trainable parameters for model3 > model2 > model1. Validation accuracy for model2 and model1 is more or less the same Since we used pre-trained Vgg16 model without training its params.
             </p>
             <div class="tags">
                 <span class="tag-python">Python</span>
