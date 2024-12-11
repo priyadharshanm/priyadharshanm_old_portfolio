@@ -4,14 +4,12 @@
     <title>PORTFOLIO</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css"/>
     <style>
         :root {
             --primary-color: #56bdbd;
-            --text-color: #333;
-            --background-color: #f8f9fa;
-            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --hover-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --hover-shadow: 0 10px 20px rgba(0,0,0,0.15);
             --transition: all 0.3s ease;
         }
 
@@ -19,92 +17,35 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--background-color);
         }
 
-        h1 {
+        /* Enhanced Header */
+        #header {
+            background: white;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        #header .logo {
+            transition: var(--transition);
+        }
+
+        #header .logo:hover {
             color: var(--primary-color);
-            transition: var(--transition);
-        }
-
-        h1:hover {
-            transform: translateX(10px);
-        }
-
-        /* Header Styles */
-        .header {
-            background-color: #f0f0f0;
-            padding: 20px;
-            position: relative;
-            box-shadow: var(--card-shadow);
-        }
-
-        /* Main Layout */
-        #wrapper {
-            display: flex;
-            min-height: 100vh;
-        }
-
-        #main {
-            flex: 1;
-            margin-left: 250px;
-            transition: var(--transition);
-        }
-
-        .inner {
-            padding: 20px;
-        }
-
-        /* Sidebar */
-        #sidebar {
-            width: 250px;
-            background-color: white;
-            position: fixed;
-            height: 100%;
-            left: 0;
-            box-shadow: var(--card-shadow);
-            transition: var(--transition);
-        }
-
-        #sidebar .inner {
-            padding: 20px;
-            overflow-y: auto;
-            height: 100%;
-        }
-
-        /* Menu Styles */
-        #menu ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        #menu ul li {
-            margin-bottom: 10px;
-        }
-
-        #menu ul li a {
-            color: var(--text-color);
-            text-decoration: none;
-            transition: var(--transition);
-            display: block;
-            padding: 8px;
-            border-radius: 5px;
-        }
-
-        #menu ul li a:hover {
-            background-color: var(--primary-color);
-            color: white;
             transform: translateX(5px);
         }
 
-        /* Content Sections */
+        /* Enhanced Banner Content */
         .content {
-            background-color: white;
-            padding: 30px;
-            margin-bottom: 30px;
+            background: white;
             border-radius: 10px;
-            box-shadow: var(--card-shadow);
+            box-shadow: var(--shadow);
             transition: var(--transition);
+            margin-bottom: 2rem;
+            padding: 2rem;
         }
 
         .content:hover {
@@ -112,39 +53,48 @@
             transform: translateY(-5px);
         }
 
-        /* Project Gallery */
+        /* Enhanced Profile Image */
+        .content img {
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+
+        .content img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Enhanced Gallery */
         .gallery {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            gap: 20px;
+            gap: 30px;
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .project {
-            flex: 0 1 calc(50% - 20px);
+            flex: 0 1 calc(50% - 15px);
             text-align: center;
-            padding: 20px;
+            padding: 25px;
             background: white;
-            border-radius: 10px;
-            box-shadow: var(--card-shadow);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
             transition: var(--transition);
-            position: relative;
-            overflow: hidden;
+            border: none;
         }
 
         .project:hover {
-            transform: translateY(-10px);
             box-shadow: var(--hover-shadow);
+            transform: translateY(-10px);
         }
 
         .project img {
             width: 100%;
             height: 200px;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 10px;
             transition: var(--transition);
         }
 
@@ -152,28 +102,112 @@
             transform: scale(1.05);
         }
 
-        /* Tags */
+        .project h3 {
+            color: var(--primary-color);
+            margin: 1rem 0;
+            transition: var(--transition);
+        }
+
+        /* Enhanced Tags */
         .tags {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
             gap: 8px;
+            justify-content: center;
             margin-top: 15px;
         }
 
         .tags span {
-            padding: 5px 15px;
+            padding: 8px 15px;
             border-radius: 20px;
-            color: white;
-            font-size: 0.9em;
+            margin: 0;
             transition: var(--transition);
         }
 
         .tags span:hover {
-            transform: scale(1.1);
+            transform: translateY(-3px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
 
-        /* Original tag colors preserved */
+        /* Enhanced Sidebar */
+        #sidebar {
+            background: white;
+            box-shadow: var(--shadow);
+        }
+
+        #menu ul li a {
+            transition: var(--transition);
+            padding: 10px;
+            border-radius: 5px;
+            display: block;
+        }
+
+        #menu ul li a:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateX(10px);
+        }
+
+        /* Icons Enhancement */
+        .icons a {
+            transition: var(--transition);
+        }
+
+        .icons a:hover {
+            color: var(--primary-color);
+            transform: scale(1.2);
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 1280px) {
+            .project {
+                flex: 0 1 calc(50% - 15px);
+            }
+        }
+
+        @media screen and (max-width: 980px) {
+            #sidebar {
+                box-shadow: none;
+            }
+            
+            .content {
+                padding: 1.5rem;
+            }
+        }
+
+        @media screen and (max-width: 736px) {
+            .project {
+                flex: 0 1 100%;
+            }
+
+            .content header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .content header img {
+                margin-top: 1rem;
+            }
+        }
+
+        /* Animation for Content Load */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content {
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        /* Retain original tag colors but enhance them */
         .tag-eda { background-color: #2c9888; }
         .tag-r { background-color: #6faac3; }
         .tag-python { background-color: #ff6696; }
@@ -189,147 +223,40 @@
         .tag-stats { background-color: #007566; }
         .tag-nlp { background-color: #5cdb8a; }
 
-        /* Profile Section */
-        .profile-section {
-            display: flex;
-            align-items: flex-start;
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-
-        .profile-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 10px;
-            box-shadow: var(--card-shadow);
-            transition: var(--transition);
-        }
-
-        .profile-image:hover {
-            transform: rotate(5deg);
-        }
-
-        /* Social Icons */
-        .icons {
-            display: flex;
-            gap: 15px;
-        }
-
-        .icons a {
-            color: var(--text-color);
-            font-size: 1.5em;
-            transition: var(--transition);
-        }
-
-        .icons a:hover {
-            color: var(--primary-color);
-            transform: scale(1.2);
-        }
-
-        /* Mobile Menu Toggle */
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5em;
-            cursor: pointer;
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            color: var(--text-color);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .project {
-                flex: 0 1 calc(50% - 20px);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-
-            #sidebar {
-                transform: translateX(-100%);
-                z-index: 1000;
-            }
-
-            #sidebar.active {
-                transform: translateX(0);
-            }
-
-            #main {
-                margin-left: 0;
-            }
-
-            .project {
-                flex: 0 1 100%;
-            }
-
-            .profile-section {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-        }
-
-        /* Animation Keyframes */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .content {
-            animation: fadeIn 0.5s ease-out;
-        }
-
-        /* Scroll Progress Bar */
-        .progress-bar {
+        /* Progress Bar */
+        .progress-container {
             position: fixed;
             top: 0;
-            left: 0;
+            width: 100%;
             height: 3px;
-            background: var(--primary-color);
+            background: transparent;
             z-index: 1001;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: var(--primary-color);
+            width: 0%;
             transition: width 0.3s ease;
         }
     </style>
 </head>
 <body>
     <!-- Add progress bar -->
-    <div class="progress-bar" id="progressBar"></div>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
 
-    <!-- Original HTML structure remains the same -->
+    <!-- Rest of your HTML remains the same -->
 
     <script>
-        // Toggle mobile menu
-        const menuToggle = document.createElement('button');
-        menuToggle.className = 'menu-toggle';
-        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-        document.body.appendChild(menuToggle);
-
-        menuToggle.addEventListener('click', () => {
-            document.querySelector('#sidebar').classList.toggle('active');
-        });
-
-        // Progress bar
-        window.addEventListener('scroll', () => {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            document.getElementById('progressBar').style.width = scrolled + '%';
-        });
-
-        // Close sidebar when clicking outside
-        document.addEventListener('click', (event) => {
-            const sidebar = document.querySelector('#sidebar');
-            if (!sidebar.contains(event.target) && !menuToggle.contains(event.target)) {
-                sidebar.classList.remove('active');
-            }
-        });
+        // Add scroll progress bar
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
