@@ -386,6 +386,7 @@
 </section>
 
 
+<!-- Projects Section -->
 <section id="projects">
     <div class="content">
         <header>
@@ -393,153 +394,178 @@
             <p style="text-align: center;">NOTE: GitHub repositories are accessible through the menu on the left.</p>
         </header>
     </div>
-<div class="gallery">
-    <!-- Project 1 -->
-    <div class="project">
-        <img src="images/food_review.png" alt="Project 1">
-        <h3>Food Reviews Classification Using BERT and MLFlow.</h3>
-        <p>Constructed an end-end pipeline for classifying reviews utilizing BERT embeddings enhancing model accuracy to 92.1% from previous best, which is 76%</p>
-        <p>Monitored and experimented with the model via MLFlow; developed a Flask-based web app deploying on AWS EC2 instance. Pipeline handled data preprocessing, including HTML tag removal using Beautiful Soup, Bert tokenization, and model prediction workflow.</p>
-        <div class="tags">
-            <span class="tag-python">Python</span>
-            <span class="tag-clustering">Tensorflow</span>
-            <span class="tag-clustering">NLP</span>
-            <span class="tag-clustering">MLFlow</span>
-            <span class="tag-clustering">AWS</span>
-            <span class="tag-clustering">Flask</span>
-            <span class="tag-ml">Transformers</span>
-            <span class="tag-clustering">BERT</span>
-            <span class="tag-group">Individual</span>
-            <span class="tag-independent">Independent</span>
-        </div>
-    </div>
 
-    <!-- Project 2 -->
-    <div class="project">
-        <img src="images/Doc_class_CNN.jpeg" alt="Project 2">
-        <h3>Low Latency Text Document Classifier Using CNN.</h3>
-        <p>Implemented a document classifier using CNN architecture, capable of categorizing 18,828 text documents into 20 classes(doc formats) with latency less than 0.4ms leveraging pre-trained Glove and char-level embeddings</p>
-        <p>Model 1: Word embeddings are based on a pre-trained Glove vector where each embedding has a size of 300 dimensions. Model 2: Char CNN char embeddings are based on pre-trained char embeddings which can be downloaded</p>
-        <div class="tags">
-            <span class="tag-python">Python</span>
-            <span class="tag-clustering">Tensorflow</span>
-            <span class="tag-nlp">NLP</span>
-            <span class="tag-ml">Machine Learning</span>
-            <span class="tag-nn">Neural Networks</span>
-            <span class="tag-individual">Individual</span>
-            <span class="tag-independent">Independent</span>
+    <div class="gallery">
+        <!-- Project 1 -->
+        <div class="project">
+            <img src="images/food_review.png" alt="Project 1">
+            <h3>Food Reviews Classification Using BERT and MLFlow.</h3>
+            <p>
+                Constructed an end-end pipeline for classifying reviews utilizing BERT embeddings enhancing model accuracy to 92.1% from previous best, which is 76%
+            </p>
+            <p>
+                Monitored and experimented with the model via MLFlow; developed a Flask-based web app deploying on AWS EC2 instance. Pipeline handled data preprocessing, including HTML tag removal using Beautiful Soup, Bert tokenization, and model prediction workflow.
+            </p>
+            <div class="tags">
+                <span class="tag-python">Python</span>
+                <span class="tag-clustering">Tensorflow</span>
+                <span class="tag-clustering">NLP</span>
+                <span class="tag-clustering">MLFlow</span>
+                <span class="tag-clustering">AWS</span>
+                <span class="tag-clustering">Flask</span>
+                <span class="tag-ml">Transformers</span>
+                <span class="tag-clustering">BERT</span>
+                <span class="tag-group">Individual</span>
+                <span class="tag-independent">Independent</span>
+            </div>
         </div>
-    </div>
 
-    <!-- Project 3 -->
-    <div class="project">
-        <img src="images/vqa.png" alt="Project 3">
-        <h3>Multi-Modal Learning for Visual Question Answering.</h3>
-        <p>Developed a Multi-modal solution to answer open-ended questions about images; Implemented a vanilla Visual Question Answering (VQA) model following the initial VQA paper, attaining impressive accuracy with low latency. 
-            Experimented with LLM, BERT, and LSTM with Glove embeddings for text encoding, Vgg-16, ResNet-50, and custom Densenet model for image encoding, elevating performance by 10% compared to the benchmark model. Performed extensive Exploratory Data Analysis on Input Questions (Text Data) deriving key information and Conducted analysis on Images, finding aspect ratio, number of channels and pixel intensity of the images.</p>
-        <div class="tags">
-            <span class="tag-python">Python</span>
-            <span class="tag-ml">Tensorflow</span>
-            <span class="tag-eda">Deep Learning</span>
-            <span class="tag-stats">NLP</span>
-            <span class="tag-algorithms">Computer Vision</span>
-            <span class="tag-r">Distributed Computing</span>
-            <span class="tag-group">Individual</span>
-            <span class="tag-academic">Academic</span>
+        <!-- Project 2 -->
+        <div class="project">
+            <img src="images/Doc_class_CNN.jpeg" alt="Project 2">
+            <h3>Low Latency Text Document Classifier Using CNN.</h3>
+            <p>
+                Implemented a document classifier using CNN architecture, capable of categorizing 18,828 text documents into 20 classes(doc formats) with latency less than 0.4ms leveraging pre-trained Glove and char-level embeddings
+            </p>
+            <p>
+                Model 1: Word embeddings are based on a pre-trained Glove vector where each embedding has a size of 300 dimensions. Model 2: Char CNN char embeddings are based on pre-trained char embeddings which can be downloaded
+            </p>
+            <div class="tags">
+                <span class="tag-python">Python</span>
+                <span class="tag-clustering">Tensorflow</span>
+                <span class="tag-nlp">NLP</span>
+                <span class="tag-ml">Machine Learning</span>
+                <span class="tag-nn">Neural Networks</span>
+                <span class="tag-individual">Individual</span>
+                <span class="tag-independent">Independent</span>
+            </div>
         </div>
-    </div>
 
-    <!-- Project 4 -->
-    <div class="project">
-        <img src="images/ab-testing.png" alt="Project 4">
-        <h3>Marketing Advertisement Experimentation.</h3>
-        <p>Business Objective: As a product data scientist at a leading marketing firm, goal is to meticulously design, execute, and analyze an A/B experiment that pits a traditional product advertisement against a Public Service Announcement (PSA).</p>
-        <p>Implemented A/B testing to gauge the relative effectiveness of advertisements versus public announcements on consumer conversion rates. Identified conversion trends like peak days and hours-for-ads through detailed data analysis and visualization. Conducted chi-squared and confidence interval tests to confirm statistical significance, and calculated the sample size for 80% power, achieving a 31.2% uplift in conversion rate.</p>
-        <div class="tags">
-            <span class="tag-python">AB Testing</span>
-            <span class="tag-stats">Python</span>
-            <span class="tag-algorithms">Statistical Analysis</span>
-            <span class="tag-eda">Exploratory Data Analysis</span>
-            <span class="tag-individual">Individual</span>
-            <span class="tag-independent">Independent</span>
+        <!-- Project 3 -->
+        <div class="project">
+            <img src="images/vqa.png" alt="Project 3">
+            <h3>Multi-Modal Learning for Visual Question Answering.</h3>
+            <p>
+                Developed a Multi-modal solution to answer open-ended questions about images; Implemented a vanilla Visual Question Answering (VQA) model following the initial VQA paper, attaining impressive accuracy with low latency. 
+                Experimented with LLM, BERT, and LSTM with Glove embeddings for text encoding, Vgg-16, ResNet-50, and custom Densenet model for image encoding, elevating performance by 10% compared to the benchmark model. Performed extensive Exploratory Data Analysis on Input Questions (Text Data) deriving key information and Conducted analysis on Images, finding aspect ratio, number of channels and pixel intensity of the images.
+            </p>
+            <div class="tags">
+                <span class="tag-python">Python</span>
+                <span class="tag-ml">Tensorflow</span>
+                <span class="tag-eda">Deep Learning</span>
+                <span class="tag-stats">NLP</span>
+                <span class="tag-algorithms">Computer Vision</span>
+                <span class="tag-r">Distributed Computing</span>
+                <span class="tag-group">Individual</span>
+                <span class="tag-academic">Academic</span>
+            </div>
         </div>
-    </div>
 
-    <!-- Project 5 -->
-    <div class="project">
-        <img src="images/audio.jpeg" alt="Project 5">
-        <h3>Speech Detection Using Augmented Deep Learning.</h3>
-        <p>Led a team of two to reduce overfitting on audio data by leveraging the Librosa library for data augmentation, generating raw audio samples and spectrogram data. Performed Exploratory Data Analysis on Audio samples; 
-            Conducted extensive feature engineering to create four distinct audio datasets that improved the model performance. Trained Four LSTM models on four different feature engineered datasets and observed an F1-score improvement from 32% on spectrogram data to 81% on raw data. 
-            In addition, used Tensorflow callbacks such as Tensorboard, Model Checkpointing and implemented a custom AUC score callback.</p>
-        <div class="tags">
-            <span class="tag-r">Tensorflow</span>
-            <span class="tag-algorithms">Deep Learning</span>
-            <span class="tag-ds">Audio Data</span>
-            <span class="tag-eda">LSTM</span>
-            <span class="tag-stats">Multi-class classification</span>
-            <span class="tag-individual">Group</span>
-            <span class="tag-academic">Academic</span>
+        <!-- Project 4 -->
+        <div class="project">
+            <img src="images/ab-testing.png" alt="Project 4">
+            <h3>Marketing Advertisement Experimentation.</h3>
+            <p>
+                Business Objective: As a product data scientist at a leading marketing firm, goal is to meticulously design, execute, and analyze an A/B experiment that pits a traditional product advertisement against a Public Service Announcement (PSA).
+            </p>
+            <p>
+                Implemented A/B testing to gauge the relative effectiveness of advertisements versus public announcements on consumer conversion rates. Identified conversion trends like peak days and hours-for-ads through detailed data analysis and visualization. Conducted chi-squared and confidence interval tests to confirm statistical significance, and calculated the sample size for 80% power, achieving a 31.2% uplift in conversion rate.
+            </p>
+            <div class="tags">
+                <span class="tag-python">AB Testing</span>
+                <span class="tag-stats">Python</span>
+                <span class="tag-algorithms">Statistical Analysis</span>
+                <span class="tag-eda">Exploratory Data Analysis</span>
+                <span class="tag-individual">Individual</span>
+                <span class="tag-independent">Independent</span>
+            </div>
         </div>
-    </div>
 
-    <!-- Project 6 -->
-    <div class="project">
-        <img src="images/oil_prices.png" alt="Project 6">
-        <h3>Multivariate Oil Prices Forecasting.</h3>
-        <p>Led a team of 4 to create ETS, Holt-Winters, and ARIMA time series models to predict oil prices from non-stationary time series, conduct ADF tests for stationarity, and implement moving average-based missing value imputation.
-            Performed Exploratory Data Analysis to find trend and seasonality of the time series. In fact, the decomposition plot revealed seasonality in time-series. Moreover, first order differencing resulted in stationary time-series. Residual analysis to check model adequacy and used QQ plot to check if residuals are normally distributed.
-            Based on RMSE and visual assessment of the forecast plots, the ARIMA(1,1,1) model was chosen for its superior performance in forecasting oil prices.</p>
-        <div class="tags">
-            <span class="tag-python">R</span>
-            <span class="tag-ml">Time Series Forecasting</span>
-            <span class="tag-eda">Exploratory Data Analysis</span>
-            <span class="tag-nlp">Residual Analysis</span>
-            <span class="tag-individual">Group</span>
-            <span class="tag-independent">Academic</span>
+        <!-- Project 5 -->
+        <div class="project">
+            <img src="images/audio.jpeg" alt="Project 5">
+            <h3>Speech Detection Using Augmented Deep Learning.</h3>
+            <p>
+                Led a team of two to reduce overfitting on audio data by leveraging the Librosa library for data augmentation, generating raw audio samples and spectrogram data. Performed Exploratory Data Analysis on Audio samples; 
+                Conducted extensive feature engineering to create four distinct audio datasets that improved the model performance. Trained Four LSTM models on four different feature engineered datasets and observed an F1-score improvement from 32% on spectrogram data to 81% on raw data. 
+                In addition, used Tensorflow callbacks such as Tensorboard, Model Checkpointing and implemented a custom AUC score callback.
+            </p>
+            <div class="tags">
+                <span class="tag-r">Tensorflow</span>
+                <span class="tag-algorithms">Deep Learning</span>
+                <span class="tag-ds">Audio Data</span>
+                <span class="tag-eda">LSTM</span>
+                <span class="tag-stats">Multi-class classification</span>
+                <span class="tag-individual">Group</span>
+                <span class="tag-academic">Academic</span>
+            </div>
         </div>
-    </div>
 
-    <!-- Project 7 -->
-    <div class="project">
-        <img src="images/taxi_demand.png" alt="Project 7">
-        <h3>Taxi Demand Prediction</h3>
-        <p>Goal is to predict the demand for the taxi, given a pickup location (longitude and latitude). Boosted model pipeline efficiency using Dask for distributed computing, handling large datasets over 20 GB.</p>
-        <p>Performed Extensive Exploratory Data analysis on the DataFrame using Dask's lazy evaluation method.
-            Enhanced feature engineering with statistical tests and K-Means clustering for pickup locations based on longitude and latitude, optimized by Silhouette score. Moreover, used Bayesian hyper-opt technique to tune the hyperparameters. Trained an XGBoost and Random Forest Regressor on the data resulting in best test MAPE of 1.02</p>
-        <div class="tags">
-            <span class="tag-python">Python</span>
-            <span class="tag-ml">Machine Learning</span>
-            <span class="tag-nlp">Bayesian Optimization</span>
-            <span class="tag-nn">K-Means Clustering</span>
-            <span class="tag-r">Distributed Computing</span>
-            <span class="tag-eda">Ensemble Modeling</span>
-            <span class="tag-individual">Individual</span>
-            <span class="tag-academic">Independent</span>
+        <!-- Project 6 -->
+        <div class="project">
+            <img src="images/oil_prices.png" alt="Project 6">
+            <h3>Multivariate Oil Prices Forecasting.</h3>
+            <p>
+                Led a team of 4 to create ETS, Holt-Winters, and ARIMA time series models to predict oil prices from non-stationary time series, conduct ADF tests for stationarity, and implement moving average-based missing value imputation.
+                Performed Exploratory Data Analysis to find trend and seasonality of the time series. In fact, the decomposition plot revealed seasonality in time-series. Moreover, first order differencing resulted in stationary time-series. Residual analysis to check model adequacy and used QQ plot to check if residuals are normally distributed.
+                Based on RMSE and visual assessment of the forecast plots, the ARIMA(1,1,1) model was chosen for its superior performance in forecasting oil prices.
+            </p>
+            <div class="tags">
+                <span class="tag-python">R</span>
+                <span class="tag-ml">Time Series Forecasting</span>
+                <span class="tag-eda">Exploratory Data Analysis</span>
+                <span class="tag-nlp">Residual Analysis</span>
+                <span class="tag-individual">Group</span>
+                <span class="tag-independent">Academic</span>
+            </div>
         </div>
-    </div>
 
-    <!-- Project 8 -->
-    <div class="project">
-        <img src="images/TL.png" alt="Project 8">
-        <h3>Transfer Learning using VGG16</h3>
-        <p>Applied the concepts learned in the Transfer Learning using VGG16. Trained three models:
-            <li>Using VGG-16 pre-trained network without Fully Connected layers and initialize all the weights with Imagenet trained weights.</li>
-            <li>After the VGG-16 network without FC layers, adding a new Conv block, 2 FC layers, and an output layer to classify 16 classes.</li>
-            <li>Final architecture will be INPUT, VGG-16 without Top layers(FC), Conv Layer, Maxpool Layer, 2 FC layers, and an Output Layer.</li>
-            Summary after training the models:
-            No. of trainable parameters for model3 > model2 > model1. Validation accuracy for model2 and model1 is more or less the same Since we used pre-trained Vgg16 model without training its params.</p>
-        <div class="tags">
-            <span class="tag-python">Python</span>
-            <span class="tag-ml">Tensorflow</span>
-            <span class="tag-r">Deep Learning</span>
-            <span class="tag-nn">Transfer Learning</span>
-            <span class="tag-eda">Convolutional Neural Network</span>
-            <span class="tag-individual">Individual</span>
-            <span class="tag-academic">Academic</span>
+        <!-- Project 7 -->
+        <div class="project">
+            <img src="images/taxi_demand.png" alt="Project 7">
+            <h3>Taxi Demand Prediction</h3>
+            <p>
+                Goal is to predict the demand for the taxi, given a pickup location (longitude and latitude). Boosted model pipeline efficiency using Dask for distributed computing, handling large datasets over 20 GB.
+            </p>
+            <p>
+                Performed Extensive Exploratory Data analysis on the DataFrame using Dask's lazy evaluation method.
+                Enhanced feature engineering with statistical tests and K-Means clustering for pickup locations based on longitude and latitude, optimized by Silhouette score. Moreover, used Bayesian hyper-opt technique to tune the hyperparameters. Trained an XGBoost and Random Forest Regressor on the data resulting in best test MAPE of 1.02
+            </p>
+            <div class="tags">
+                <span class="tag-python">Python</span>
+                <span class="tag-ml">Machine Learning</span>
+                <span class="tag-nlp">Bayesian Optimization</span>
+                <span class="tag-nn">K-Means Clustering</span>
+                <span class="tag-r">Distributed Computing</span>
+                <span class="tag-eda">Ensemble Modeling</span>
+                <span class="tag-individual">Individual</span>
+                <span class="tag-academic">Independent</span>
+            </div>
+        </div>
+
+        <!-- Project 8 -->
+        <div class="project">
+            <img src="images/TL.png" alt="Project 8">
+            <h3>Transfer Learning using VGG16</h3>
+            <p>
+                Applied the concepts learned in the Transfer Learning using VGG16. Trained three models:
+                <li>Using VGG-16 pre-trained network without Fully Connected layers and initialize all the weights with Imagenet trained weights.</li>
+                <li>After the VGG-16 network without FC layers, adding a new Conv block, 2 FC layers, and an output layer to classify 16 classes.</li>
+                <li>Final architecture will be INPUT, VGG-16 without Top layers(FC), Conv Layer, Maxpool Layer, 2 FC layers, and an Output Layer.</li>
+                Summary after training the models:
+                No. of trainable parameters for model3 > model2 > model1. Validation accuracy for model2 and model1 is more or less the same Since we used pre-trained Vgg16 model without training its params.
+            </p>
+            <div class="tags">
+                <span class="tag-python">Python</span>
+                <span class="tag-ml">Tensorflow</span>
+                <span class="tag-r">Deep Learning</span>
+                <span class="tag-nn">Transfer Learning</span>
+                <span class="tag-eda">Convolutional Neural Network</span>
+                <span class="tag-individual">Individual</span>
+                <span class="tag-academic">Academic</span>
+            </div>
         </div>
     </div>
-</div>
 </section>
                 
 <!-- Education Section -->
