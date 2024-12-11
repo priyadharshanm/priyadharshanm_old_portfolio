@@ -334,6 +334,31 @@
                 font-size: 1.5rem;
             }
         }
+
+        .github-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--text-color);
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 5px;
+        margin: 10px 0;
+        transition: var(--transition);
+        border: 1px solid #e1e4e8;
+        background: #fafbfc;
+        }
+
+    .github-link:hover {
+        background: #f3f4f6;
+        transform: translateY(-2px);
+        box-shadow: var(--shadow);
+        }
+
+    .github-link i {
+        font-size: 1.2em;
+        color: #24292e;
+      }
     </style>
 </head>
 <body class="is-preload">
@@ -481,6 +506,10 @@
                             <h3>Food Reviews Classification Using BERT and MLFlow.</h3>
                             <p>Constructed an end-end pipeline for classifying reviews utilizing BERT embeddings enhancing model accuracy to 92.1% from previous best, which is 76%</p>
                             <p>Monitored and experimented with the model via MLFlow; developed a Flask-based web app deploying on AWS EC2 instance. Pipeline handled data preprocessing, including HTML tag removal using Beautiful Soup, Bert tokenization, and model prediction workflow.</p>
+                            <a href="https://github.com/Mithil01/Food-Review-Classification-Using-BERT" class="github-link">
+                            <i class="fab fa-github"></i>
+                             <span>View Project on GitHub</span>
+                            </a>
                             <div class="tags">
                                 <span class="tag-python">Python</span>
                                 <span class="tag-clustering">Tensorflow</span>
