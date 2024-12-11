@@ -315,6 +315,55 @@
     .tag-stats { background-color: #007566; }
     .tag-nlp { background-color: #5cdb8a; }
 
+    .skills-container {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+    }
+
+    .skills-container:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--hover-shadow);
+    }
+
+    .skill-category {
+        margin-bottom: 20px;
+    }
+
+    .skill-header {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: var(--gradient-end);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .skill-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding-left: 35px;
+    }
+
+    .skill-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 5px 12px;
+        background: #f8f9fa;
+        border-radius: 15px;
+        font-size: 0.9rem;
+        transition: var(--transition);
+    }
+
+    .skill-item:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow);
+    }
     /* GitHub Link */
     .github-link {
         display: inline-flex;
@@ -505,18 +554,77 @@
 
                 <!-- Skills Section -->
                 <section id="banner">
-                    <div class="content">
-                        <header style="display: flex; justify-content: space-between; align-items: center;">
-                            <div style="display: inline-block;">
-                                <h1>Skills</h1>
-                            </div>
-                        </header>
-                        <li><strong>Languages & Frameworks: </strong> R, Matlab, Python(Numpy, Pandas, Matplotlib, Spacy, Scrapy, Beautiful Soup, PySpark, Flask, NLTK, Scikit-learn, TensorFlow, PyTorch, Hugging Face), C++, REST API, Object Oriented Programming.</li>
-                        <li><strong>Data & Tools: </strong> SQL, PostgreSQL, Vector DB, AWS(S3, EC2, EBS), Git, Linux, Streamlit, Databricks, Docker, CI/CD.</li>
-                        <li><strong>Domains: </strong> Data Science, Machine Learning, Deep Learning, NLP, Distributed Computing, Big Data, LLM, Langchain, RAG, Prompt Engineering.</li>
-                    </div>
-                </section>
+    <div class="content">
+        <header style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: inline-block;">
+                <h1>Skills</h1>
+            </div>
+        </header>
+        
+        <!-- Languages & Frameworks -->
+        <div class="skills-category">
+            <div class="skill-header">
+                <i class="fas fa-code"></i>
+                <strong>Languages & Frameworks</strong>
+            </div>
+            <div class="skill-items">
+                <span class="skill-item"><i class="fab fa-python"></i> Python</span>
+                <span class="skill-item"><i class="fab fa-r-project"></i> R</span>
+                <span class="skill-item"><i class="fas fa-square-root-alt"></i> Matlab</span>
+                <span class="skill-item"><i class="fas fa-brain"></i> TensorFlow</span>
+                <span class="skill-item"><i class="fas fa-fire"></i> PyTorch</span>
+                <span class="skill-item"><i class="fas fa-robot"></i> Hugging Face</span>
+                <span class="skill-item"><i class="fas fa-chart-bar"></i> Numpy/Pandas</span>
+                <span class="skill-item"><i class="fas fa-server"></i> PySpark</span>
+                <span class="skill-item"><i class="fas fa-spider"></i> Scrapy</span>
+                <span class="skill-item"><i class="fas fa-flask"></i> Flask</span>
+                <span class="skill-item"><i class="fas fa-cogs"></i> NLTK</span>
+                <span class="skill-item"><i class="fas fa-rocket"></i> Scikit-learn</span>
+                <span class="skill-item"><i class="fas fa-code-branch"></i> REST API</span>
+                <span class="skill-item"><i class="fas fa-cube"></i> OOP</span>
+            </div>
+        </div>
 
+        <!-- Data & Tools -->
+        <div class="skills-category">
+            <div class="skill-header">
+                <i class="fas fa-database"></i>
+                <strong>Data & Tools</strong>
+            </div>
+            <div class="skill-items">
+                <span class="skill-item"><i class="fas fa-database"></i> SQL/PostgreSQL</span>
+                <span class="skill-item"><i class="fab fa-aws"></i> AWS (EC2, S3, EBS)</span>
+                <span class="skill-item"><i class="fas fa-cube"></i> Vector DB</span>
+                <span class="skill-item"><i class="fab fa-git-alt"></i> Git</span>
+                <span class="skill-item"><i class="fab fa-linux"></i> Linux</span>
+                <span class="skill-item"><i class="fas fa-stream"></i> Streamlit</span>
+                <span class="skill-item"><i class="fas fa-infinity"></i> Databricks</span>
+                <span class="skill-item"><i class="fab fa-docker"></i> Docker</span>
+                <span class="skill-item"><i class="fas fa-sync"></i> CI/CD</span>
+            </div>
+        </div>
+
+        <!-- Domains -->
+        <div class="skills-category">
+            <div class="skill-header">
+                <i class="fas fa-brain"></i>
+                <strong>Domains</strong>
+            </div>
+            <div class="skill-items">
+                <span class="skill-item"><i class="fas fa-chart-network"></i> Data Science</span>
+                <span class="skill-item"><i class="fas fa-robot"></i> Machine Learning</span>
+                <span class="skill-item"><i class="fas fa-brain"></i> Deep Learning</span>
+                <span class="skill-item"><i class="fas fa-comments"></i> NLP</span>
+                <span class="skill-item"><i class="fas fa-network-wired"></i> Distributed Computing</span>
+                <span class="skill-item"><i class="fas fa-database"></i> Big Data</span>
+                <span class="skill-item"><i class="fas fa-robot"></i> LLM</span>
+                <span class="skill-item"><i class="fas fa-link"></i> Langchain</span>
+                <span class="skill-item"><i class="fas fa-project-diagram"></i> RAG</span>
+                <span class="skill-item"><i class="fas fa-magic"></i> Prompt Engineering</span>
+            </div>
+        </div>
+    </div>
+               </section>
                 <!-- Education Section -->
                 <section id="banner">
                     <div class="content">
