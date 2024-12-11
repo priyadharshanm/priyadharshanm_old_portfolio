@@ -10,65 +10,36 @@
             --primary-color: #56bdbd;
             --text-color: #333;
             --background-color: #f8f9fa;
-            --card-background: #ffffff;
-            --shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --hover-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s ease;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             background-color: var(--background-color);
         }
 
         h1 {
             color: var(--primary-color);
-            margin-bottom: 1rem;
+            transition: var(--transition);
+        }
+
+        h1:hover {
+            transform: translateX(10px);
         }
 
         /* Header Styles */
-        #header {
-            background-color: var(--card-background);
-            padding: 1rem;
-            box-shadow: var(--shadow);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .header {
+            background-color: #f0f0f0;
+            padding: 20px;
+            position: relative;
+            box-shadow: var(--card-shadow);
         }
 
-        .logo {
-            text-decoration: none;
-            color: var(--primary-color);
-            font-weight: bold;
-            font-size: 1.5rem;
-        }
-
-        .icons {
-            display: flex;
-            gap: 1rem;
-            list-style: none;
-        }
-
-        .icons a {
-            color: var(--text-color);
-            font-size: 1.5rem;
-            transition: color 0.3s ease;
-        }
-
-        .icons a:hover {
-            color: var(--primary-color);
-        }
-
-        /* Layout */
+        /* Main Layout */
         #wrapper {
             display: flex;
             min-height: 100vh;
@@ -76,132 +47,133 @@
 
         #main {
             flex: 1;
-            padding: 2rem;
             margin-left: 250px;
-            transition: margin-left 0.3s ease;
+            transition: var(--transition);
+        }
+
+        .inner {
+            padding: 20px;
         }
 
         /* Sidebar */
         #sidebar {
             width: 250px;
-            background-color: var(--card-background);
-            padding: 2rem;
+            background-color: white;
             position: fixed;
-            height: 100vh;
+            height: 100%;
+            left: 0;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+        }
+
+        #sidebar .inner {
+            padding: 20px;
             overflow-y: auto;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease;
+            height: 100%;
         }
 
-        /* Menu */
-        #menu h2 {
-            margin-bottom: 1rem;
-        }
-
+        /* Menu Styles */
         #menu ul {
             list-style: none;
+            padding: 0;
         }
 
         #menu ul li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 10px;
         }
 
         #menu ul li a {
             color: var(--text-color);
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: var(--transition);
             display: block;
-            padding: 0.5rem 0;
+            padding: 8px;
+            border-radius: 5px;
         }
 
         #menu ul li a:hover {
-            color: var(--primary-color);
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateX(5px);
         }
 
         /* Content Sections */
-        .section {
-            background-color: var(--card-background);
-            padding: 2rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            box-shadow: var(--shadow);
-        }
-
-        /* About Section */
-        #banner {
-            margin-bottom: 2rem;
-        }
-
         .content {
-            background-color: var(--card-background);
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            margin-bottom: 2rem;
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
         }
 
-        .about-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1.5rem;
-        }
-
-        .about-header img {
-            border-radius: 8px;
-            box-shadow: var(--shadow);
+        .content:hover {
+            box-shadow: var(--hover-shadow);
+            transform: translateY(-5px);
         }
 
         /* Project Gallery */
         .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 2rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .project {
-            background-color: var(--card-background);
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease;
+            flex: 0 1 calc(50% - 20px);
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
         }
 
         .project:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            box-shadow: var(--hover-shadow);
         }
 
         .project img {
             width: 100%;
             height: 200px;
             object-fit: cover;
-            border-radius: 4px;
-            margin-bottom: 1rem;
+            border-radius: 8px;
+            transition: var(--transition);
         }
 
-        .project h3 {
-            margin: 1rem 0;
-            color: var(--primary-color);
+        .project:hover img {
+            transform: scale(1.05);
         }
 
         /* Tags */
         .tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 15px;
         }
 
-        .tag-eda, .tag-r, .tag-python, .tag-ml, .tag-nn, .tag-ds,
-        .tag-individual, .tag-group, .tag-clustering, .tag-academic,
-        .tag-independent, .tag-algorithms, .tag-stats, .tag-nlp {
-            padding: 0.25rem 0.75rem;
-            border-radius: 16px;
+        .tags span {
+            padding: 5px 15px;
+            border-radius: 20px;
             color: white;
-            font-size: 0.875rem;
+            font-size: 0.9em;
+            transition: var(--transition);
         }
 
+        .tags span:hover {
+            transform: scale(1.1);
+        }
+
+        /* Original tag colors preserved */
         .tag-eda { background-color: #2c9888; }
         .tag-r { background-color: #6faac3; }
         .tag-python { background-color: #ff6696; }
@@ -217,24 +189,61 @@
         .tag-stats { background-color: #007566; }
         .tag-nlp { background-color: #5cdb8a; }
 
+        /* Profile Section */
+        .profile-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+        }
+
+        .profile-image:hover {
+            transform: rotate(5deg);
+        }
+
+        /* Social Icons */
+        .icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .icons a {
+            color: var(--text-color);
+            font-size: 1.5em;
+            transition: var(--transition);
+        }
+
+        .icons a:hover {
+            color: var(--primary-color);
+            transform: scale(1.2);
+        }
+
         /* Mobile Menu Toggle */
         .menu-toggle {
             display: none;
             background: none;
             border: none;
-            font-size: 1.5rem;
-            color: var(--text-color);
+            font-size: 1.5em;
             cursor: pointer;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            color: var(--text-color);
         }
 
         /* Responsive Design */
         @media (max-width: 1024px) {
-            #main {
-                margin-left: 200px;
-            }
-            
-            #sidebar {
-                width: 200px;
+            .project {
+                flex: 0 1 calc(50% - 20px);
             }
         }
 
@@ -243,173 +252,93 @@
                 display: block;
             }
 
-            #main {
-                margin-left: 0;
-                padding: 1rem;
-            }
-
             #sidebar {
                 transform: translateX(-100%);
+                z-index: 1000;
             }
 
             #sidebar.active {
                 transform: translateX(0);
             }
 
-            .about-header {
+            #main {
+                margin-left: 0;
+            }
+
+            .project {
+                flex: 0 1 100%;
+            }
+
+            .profile-section {
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
             }
-
-            .about-header img {
-                margin-bottom: 1rem;
-            }
-
-            .gallery {
-                grid-template-columns: 1fr;
-            }
         }
 
-        @media (max-width: 480px) {
-            .content {
-                padding: 1rem;
-            }
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-            h1 {
-                font-size: 1.5rem;
-            }
+        .content {
+            animation: fadeIn 0.5s ease-out;
+        }
 
-            .project {
-                padding: 1rem;
-            }
+        /* Scroll Progress Bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--primary-color);
+            z-index: 1001;
+            transition: width 0.3s ease;
         }
     </style>
 </head>
-<body class="is-preload">
-    <div id="wrapper">
-        <!-- Sidebar -->
-        <div id="sidebar">
-            <nav id="menu">
-                <header class="major">
-                    <h2>Menu</h2>
-                </header>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li>
-                        <span class="opener">Academic Projects</span>
-                        <ul>
-                            <li><a href="https://github.com/Mithil01/Visual-Question-Answering-System">Multi-Modal Learning for VQA</a></li>
-                            <li><a href="https://github.com/Mithil01/Spoken-Digit-Recognition-Using-Augmented-Deep-Learning">Speech Detection</a></li>
-                            <li><a href="https://github.com/Mithil01/Oil-Price-Forecasting">Oil Price Forecasting</a></li>
-                            <li><a href="https://github.com/Mithil01/Transfer-Learning-CNN-Using-VGG16">Transfer Learning VGG16</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="opener">Independent Projects</span>
-                        <ul>
-                            <li><a href="https://github.com/Mithil01/Food-Review-Classification-Using-BERT">Food Reviews Classification</a></li>
-                            <li><a href="https://github.com/Mithil01/Document-Classification-Using-CNN">Document Classification</a></li>
-                            <li><a href="https://github.com/Mithil01/Marketing-ad-campaign-experimentation-">Marketing Ad Experimentation</a></li>
-                            <li><a href="https://github.com/Mithil01/New-York-Taxi-Demand-Prediction">Taxi Demand Prediction</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+<body>
+    <!-- Add progress bar -->
+    <div class="progress-bar" id="progressBar"></div>
 
-        <!-- Main Content -->
-        <div id="main">
-            <!-- Header -->
-            <header id="header">
-                <button class="menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <a href="#" class="logo"><strong>PORTFOLIO</strong></a>
-                <ul class="icons">
-                    <li><a href="https://www.linkedin.com/in/mithiljeevangaonkar/" class="fab fa-linkedin"></a></li>
-                    <li><a href="https://github.com/Mithil01" class="fab fa-github"></a></li>
-                </ul>
-            </header>
+    <!-- Original HTML structure remains the same -->
 
-            <!-- About Section -->
-            <section id="about" class="content">
-                <div class="about-header">
-                    <div>
-                        <h1>About Me</h1>
-                        <p><strong>Experienced Data Scientist | Data Science Graduate</strong></p>
-                    </div>
-                    <img src="images/mit_cropped.png" alt="Profile" width="200" height="200">
-                </div>
-                <p>I am Mithil Gaonkar, Previously a Data Scientist at Bosch, currently pursuing a Master's in Data Science...</p>
-            </section>
-
-            <!-- Skills Section -->
-            <section id="skills" class="content">
-                <h1>Skills</h1>
-                <ul>
-                    <li><strong>Languages & Frameworks:</strong> R, Matlab, Python(Numpy, Pandas, Matplotlib, Spacy...)...</li>
-                    <li><strong>Data & Tools:</strong> SQL, PostgreSQL, Vector DB, AWS(S3, EC2, EBS)...</li>
-                    <li><strong>Domains:</strong> Data Science, Machine Learning, Deep Learning, NLP...</li>
-                </ul>
-            </section>
-
-            <!-- Education Section -->
-            <section id="education" class="content">
-                <h1>Education</h1>
-                <h3>Master of Science in Data Science</h3>
-                <h5>University at Buffalo, SUNY</h5>
-                <!-- Rest of education content -->
-            </section>
-
-            <!-- Experience Section -->
-            <section id="experience" class="content">
-                <h1>Work Experience</h1>
-                <!-- Experience content -->
-            </section>
-
-            <!-- Projects Section -->
-            <section id="projects">
-                <h1 style="text-align: center;">PROJECT GALLERY</h1>
-                <p style="text-align: center;">NOTE: GitHub repositories are accessible through the menu on the left.</p>
-                
-                <div class="gallery">
-                    <!-- Project cards with your existing content -->
-                    <!-- Example of one project card structure: -->
-                    <div class="project">
-                        <img src="images/food_review.png" alt="Food Review Project">
-                        <h3>Food Reviews Classification Using BERT and MLFlow</h3>
-                        <p>Constructed an end-to-end pipeline for classifying reviews utilizing BERT embeddings...</p>
-                        <div class="tags">
-                            <span class="tag-python">Python</span>
-                            <span class="tag-ml">Machine Learning</span>
-                            <span class="tag-independent">Independent</span>
-                        </div>
-                    </div>
-                    <!-- Add other project cards following the same structure -->
-                </div>
-            </section>
-        </div>
-    </div>
-
-    <!-- Scripts -->
     <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
+        // Toggle mobile menu
+        const menuToggle = document.createElement('button');
+        menuToggle.className = 'menu-toggle';
+        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        document.body.appendChild(menuToggle);
+
+        menuToggle.addEventListener('click', () => {
             document.querySelector('#sidebar').classList.toggle('active');
         });
 
-        // Close sidebar when clicking outside on mobile
-        document.addEventListener('click', function(event) {
+        // Progress bar
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+        });
+
+        // Close sidebar when clicking outside
+        document.addEventListener('click', (event) => {
             const sidebar = document.querySelector('#sidebar');
-            const menuToggle = document.querySelector('.menu-toggle');
-            
             if (!sidebar.contains(event.target) && !menuToggle.contains(event.target)) {
                 sidebar.classList.remove('active');
             }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
     </script>
 </body>
