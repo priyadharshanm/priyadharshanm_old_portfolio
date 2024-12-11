@@ -28,17 +28,20 @@
             background-color: var(--bg-color);
         }
 
-        /* Layout */
+        /* Layout Structure */
         #wrapper {
             display: flex;
             min-height: 100vh;
+            position: relative;
         }
 
         #main {
             flex: 1;
             margin-left: 250px;
-            transition: var(--transition);
+            width: calc(100% - 250px);
             background: white;
+            position: relative;
+            z-index: 1;
         }
 
         .inner {
@@ -142,6 +145,46 @@
             margin: 1rem 0;
         }
 
+        /* Sidebar */
+        #sidebar {
+            width: 250px;
+            background: white;
+            position: fixed;
+            height: 100vh;
+            left: 0;
+            top: 0;
+            overflow-y: auto;
+            box-shadow: var(--shadow);
+            z-index: 2;
+        }
+
+        #sidebar .inner {
+            padding: 2rem;
+        }
+
+        #menu ul {
+            list-style: none;
+        }
+
+        #menu ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        #menu ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            border-radius: 5px;
+            transition: var(--transition);
+        }
+
+        #menu ul li a:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateX(10px);
+        }
+
         /* Tags */
         .tags {
             display: flex;
@@ -179,44 +222,6 @@
         .tag-algorithms { background-color: #0073E6; }
         .tag-stats { background-color: #007566; }
         .tag-nlp { background-color: #5cdb8a; }
-
-        /* Sidebar */
-        #sidebar {
-            width: 250px;
-            background: white;
-            position: fixed;
-            height: 100vh;
-            overflow-y: auto;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        #sidebar .inner {
-            padding: 2rem;
-        }
-
-        #menu ul {
-            list-style: none;
-        }
-
-        #menu ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        #menu ul li a {
-            color: var(--text-color);
-            text-decoration: none;
-            padding: 10px;
-            display: block;
-            border-radius: 5px;
-            transition: var(--transition);
-        }
-
-        #menu ul li a:hover {
-            background: var(--primary-color);
-            color: white;
-            transform: translateX(10px);
-        }
 
         /* Headers */
         h1 {
@@ -288,11 +293,12 @@
 
             #main {
                 margin-left: 0;
+                width: 100%;
             }
 
             #sidebar {
                 transform: translateX(-100%);
-                z-index: 1001;
+                transition: transform 0.3s ease;
             }
 
             #sidebar.active {
@@ -309,8 +315,9 @@
                 text-align: center;
             }
 
-            .profile-image {
-                margin-top: 1rem;
+            .content header {
+                flex-direction: column;
+                align-items: center;
             }
         }
 
@@ -330,7 +337,8 @@
     </style>
 </head>
 <body class="is-preload">
-    <!-- Progress Bar -->
+
+<!-- Progress Bar -->
     <div class="progress-container">
         <div class="progress-bar" id="progressBar"></div>
     </div>
@@ -372,7 +380,7 @@
                 </nav>
             </div>
         </div>
-    
+
         <!-- Main Content -->
         <div id="main">
             <div class="inner">
@@ -388,352 +396,285 @@
                     </ul>
                 </header>
 
-                <!-- Content sections will go here in Part 2 -->
                 <!-- Banner/About Section -->
-<!-- Banner/About Section -->
-<section id="banner">
-    <div class="content">
-        <header style="display: flex; justify-content: space-between; align-items: center;">
-            <div style="display: inline-block;">
-                <h1>About Me</h1>
-                
+                <section id="banner">
+                    <div class="content">
+                        <header style="display: flex; justify-content: space-between; align-items: center;">
+                            <div style="display: inline-block;">
+                                <h1>About Me</h1>
+                                <p><strong>Experienced Data Scientist | Data Science Graduate</strong></p>
+                            </div>
+                            <img src="images/mit_cropped.png" alt="" width="200" height="200" style="display: inline-block; border-radius: 10px; transition: transform 0.3s ease;">
+                        </header>
+                        <p><br/>I am Mithil Gaonkar, Previously a Data Scientist at Bosch, currently pursuing a Master's in Data Science.<br/>
+                            I ranked in the top 2% All India Rank for the GATE Computer Science exam, a highly competitive test for students preparing for a Master's degree in Computer Science.
+                            Known for my curious and analytical mind, I possess a keen eye for detail, often uncovering nuanced insights in data that others may overlook. This passion for working with data led me to pursue a Master's in Data Science at the University at Buffalo, where I am currently enrolled.<br/>
+                            During my academic journey, I delved deep into various machine learning and Deep Learning techniques, honing my skills in building end-end Machine Learning Pipelines. Additionally, I served as a Teaching Assistant, mentoring 240 students in designing BCNF-compliant relational database systems, optimizing PostgreSQL query execution by analyzing problematic queries and improving search efficiency through indexing.<br/>
+                            I am seeking opportunities to leverage my extensive Machine Learning background alongside my newfound expertise in LLM's, propelling my career to new heights.</p>
+                    </div>
+                </section>
+
+                <!-- Skills Section -->
+                <section id="banner">
+                    <div class="content">
+                        <header style="display: flex; justify-content: space-between; align-items: center;">
+                            <div style="display: inline-block;">
+                                <h1>Skills</h1>
+                            </div>
+                        </header>
+                        <li><strong>Languages & Frameworks: </strong> R, Matlab, Python(Numpy, Pandas, Matplotlib, Spacy, Scrapy, Beautiful Soup, PySpark, Flask, NLTK, Scikit-learn, TensorFlow, PyTorch, Hugging Face), C++, REST API, Object Oriented Programming.</li>
+                        <li><strong>Data & Tools: </strong> SQL, PostgreSQL, Vector DB, AWS(S3, EC2, EBS), Git, Linux, Streamlit, Databricks, Docker, CI/CD.</li>
+                        <li><strong>Domains: </strong> Data Science, Machine Learning, Deep Learning, NLP, Distributed Computing, Big Data, LLM, Langchain, RAG, Prompt Engineering.</li>
+                    </div>
+                </section>
+
+                <!-- Education Section -->
+                <section id="banner">
+                    <div class="content">
+                        <header style="display: flex; justify-content: space-between; align-items: center;">
+                            <div style="display: inline-block;">
+                                <h1>Education</h1>
+                            </div>
+                        </header>
+                        
+                        <h3>Master of Science in Data Science</h3>
+                        <h5>University at Buffalo, SUNY, New York, United States.</h5>
+                        <strong>Relevant Courses: </strong> Statistical Learning & Data Mining, Probability, Linear Algebra, Machine Learning, Natural Language Processing, Computer Vision and Image Processing, Data Structures & Algorithms, Database Query Language(PostgreSQL).
+                        <p></p>
+                        <h3>Bachelor of Engineering in Electronics and Communication</h3>
+                        <h5>National Institute of Engineering, Mysore, India.</h5>
+                        <strong>Relevant Courses: </strong> Database Systems, Algorithms, Object Oriented Design, Git Workflows, Machine Learning.
+                    </div>
+                </section>
+
+                <!-- Work Experience Section -->
+                <section id="banner">
+                    <div class="content">
+                        <header style="display: flex; justify-content: space-between; align-items: center;">
+                            <div style="display: inline-block;">
+                                <h1>Work Experience</h1>
+                            </div>
+                        </header>
+                        
+                        <h4>Graduate Teaching Assistant, University at Buffalo <span style="font-weight: normal;">(Jan 2024 - May 2024)</span></h4>
+                        <p></p>
+                        <h4>Data Science Intern, AAIC Technologies <span style="font-weight: normal;">(Aug 2022 - Jan 2023)</span></h4>
+                        <p></p>
+                        <h4>Data Scientist, Bosch <span style="font-weight: normal;">(Aug 2020 - Aug 2022)</span></h4>
+                    </div>
+                </section>
+
+                <!-- Projects Section -->
+                <section id="projects">
+                    <div class="content">
+                        <header>
+                            <h1 style="text-align: center;">PROJECT GALLERY</h1>
+                            <p style="text-align: center;">NOTE: GitHub repositories are accessible through the menu on the left.</p>
+                        </header>
+                    </div>
+
+                    <div class="gallery">
+                    <!-- Project Cards -->
+                        <!-- Project 1 -->
+                        <div class="project">
+                            <img src="images/food_review.png" alt="Project 1">
+                            <h3>Food Reviews Classification Using BERT and MLFlow.</h3>
+                            <p>Constructed an end-end pipeline for classifying reviews utilizing BERT embeddings enhancing model accuracy to 92.1% from previous best, which is 76%</p>
+                            <p>Monitored and experimented with the model via MLFlow; developed a Flask-based web app deploying on AWS EC2 instance. Pipeline handled data preprocessing, including HTML tag removal using Beautiful Soup, Bert tokenization, and model prediction workflow.</p>
+                            <div class="tags">
+                                <span class="tag-python">Python</span>
+                                <span class="tag-clustering">Tensorflow</span>
+                                <span class="tag-clustering">NLP</span>
+                                <span class="tag-clustering">MLFlow</span>
+                                <span class="tag-clustering">AWS</span>
+                                <span class="tag-clustering">Flask</span>
+                                <span class="tag-ml">Transformers</span>
+                                <span class="tag-clustering">BERT</span>
+                                <span class="tag-group">Individual</span>
+                                <span class="tag-independent">Independent</span>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div class="project">
+                            <img src="images/Doc_class_CNN.jpeg" alt="Project 2">
+                            <h3>Low Latency Text Document Classifier Using CNN.</h3>
+                            <p>Implemented a document classifier using CNN architecture, capable of categorizing 18,828 text documents into 20 classes(doc formats) with latency less than 0.4ms leveraging pre-trained Glove and char-level embeddings</p>
+                            <p>Model 1: Word embeddings are based on a pre-trained Glove vector where each embedding has a size of 300 dimensions. Model 2: Char CNN char embeddings are based on pre-trained char embeddings which can be downloaded</p>
+                            <div class="tags">
+                                <span class="tag-python">Python</span>
+                                <span class="tag-clustering">Tensorflow</span>
+                                <span class="tag-nlp">NLP</span>
+                                <span class="tag-ml">Machine Learning</span>
+                                <span class="tag-nn">Neural Networks</span>
+                                <span class="tag-individual">Individual</span>
+                                <span class="tag-independent">Independent</span>
+                            </div>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="project">
+                            <img src="images/vqa.png" alt="Project 3">
+                            <h3>Multi-Modal Learning for Visual Question Answering.</h3>
+                            <p>Developed a Multi-modal solution to answer open-ended questions about images; Implemented a vanilla Visual Question Answering (VQA) model following the initial VQA paper, attaining impressive accuracy with low latency. 
+                                Experimented with LLM, BERT, and LSTM with Glove embeddings for text encoding, Vgg-16, ResNet-50, and custom Densenet model for image encoding, elevating performance by 10% compared to the benchmark model. Performed extensive Exploratory Data Analysis on Input Questions (Text Data) deriving key information and Conducted analysis on Images, finding aspect ratio, number of channels and pixel intensity of the images.</p>
+                            <div class="tags">
+                                <span class="tag-python">Python</span>
+                                <span class="tag-ml">Tensorflow</span>
+                                <span class="tag-eda">Deep Learning</span>
+                                <span class="tag-stats">NLP</span>
+                                <span class="tag-algorithms">Computer Vision</span>
+                                <span class="tag-r">Distributed Computing</span>
+                                <span class="tag-group">Individual</span>
+                                <span class="tag-academic">Academic</span>
+                            </div>
+                        </div>
+
+                        <!-- Project 4 -->
+                        <div class="project">
+                            <img src="images/ab-testing.png" alt="Project 4">
+                            <h3>Marketing Advertisement Experimentation.</h3>
+                            <p>Business Objective: As a product data scientist at a leading marketing firm, goal is to meticulously design, execute, and analyze an A/B experiment that pits a traditional product advertisement against a Public Service Announcement (PSA).</p>
+                            <p>Implemented A/B testing to gauge the relative effectiveness of advertisements versus public announcements on consumer conversion rates. Identified conversion trends like peak days and hours-for-ads through detailed data analysis and visualization. Conducted chi-squared and confidence interval tests to confirm statistical significance, and calculated the sample size for 80% power, achieving a 31.2% uplift in conversion rate.</p>
+                            <div class="tags">
+                                <span class="tag-python">AB Testing</span>
+                                <span class="tag-stats">Python</span>
+                                <span class="tag-algorithms">Statistical Analysis</span>
+                                <span class="tag-eda">Exploratory Data Analysis</span>
+                                <span class="tag-individual">Individual</span>
+                                <span class="tag-independent">Independent</span>
+                            </div>
+                        </div>
+
+                        <!-- Project 5 -->
+                        <div class="project">
+                            <img src="images/audio.jpeg" alt="Project 5">
+                            <h3>Speech Detection Using Augmented Deep Learning.</h3>
+                            <p>Led a team of two to reduce overfitting on audio data by leveraging the Librosa library for data augmentation, generating raw audio samples and spectrogram data. Performed Exploratory Data Analysis on Audio samples; 
+                                Conducted extensive feature engineering to create four distinct audio datasets that improved the model performance. Trained Four LSTM models on four different feature engineered datasets and observed an F1-score improvement from 32% on spectrogram data to 81% on raw data. 
+                                In addition, used Tensorflow callbacks such as Tensorboard, Model Checkpointing and implemented a custom AUC score callback.</p>
+                            <div class="tags">
+                                <span class="tag-r">Tensorflow</span>
+                                <span class="tag-algorithms">Deep Learning</span>
+                                <span class="tag-ds">Audio Data</span>
+                                <span class="tag-eda">LSTM</span>
+                                <span class="tag-stats">Multi-class classification</span>
+                                <span class="tag-individual">Group</span>
+                                <span class="tag-academic">Academic</span>
+                            </div>
+                        </div>
+
+                        <!-- Project 6 -->
+                        <div class="project">
+                            <img src="images/oil_prices.png" alt="Project 6">
+                            <h3>Multivariate Oil Prices Forecasting.</h3>
+                            <p>Led a team of 4 to create ETS, Holt-Winters, and ARIMA time series models to predict oil prices from non-stationary time series, conduct ADF tests for stationarity, and implement moving average-based missing value imputation.
+                                Performed Exploratory Data Analysis to find trend and seasonality of the time series. In fact, the decomposition plot revealed seasonality in time-series. Moreover, first order differencing resulted in stationary time-series. Residual analysis to check model adequacy and used QQ plot to check if residuals are normally distributed.
+                                Based on RMSE and visual assessment of the forecast plots, the ARIMA(1,1,1) model was chosen for its superior performance in forecasting oil prices.</p>
+                            <div class="tags">
+                                <span class="tag-python">R</span>
+                                <span class="tag-ml">Time Series Forecasting</span>
+                                <span class="tag-eda">Exploratory Data Analysis</span>
+                                <span class="tag-nlp">Residual Analysis</span>
+                                <span class="tag-individual">Group</span>
+                                <span class="tag-independent">Academic</span>
+                            </div>
+                        </div>
+
+                        <!-- Project 7 -->
+                        <div class="project">
+                            <img src="images/taxi_demand.png" alt="Project 7">
+                            <h3>Taxi Demand Prediction</h3>
+                            <p>Goal is to predict the demand for the taxi, given a pickup location (longitude and latitude). Boosted model pipeline efficiency using Dask for distributed computing, handling large datasets over 20 GB.</p>
+                            <p>Performed Extensive Exploratory Data analysis on the DataFrame using Dask's lazy evaluation method.
+                                Enhanced feature engineering with statistical tests and K-Means clustering for pickup locations based on longitude and latitude, optimized by Silhouette score. Moreover, used Bayesian hyper-opt technique to tune the hyperparameters. Trained an XGBoost and Random Forest Regressor on the data resulting in best test MAPE of 1.02</p>
+                            <div class="tags">
+                                <span class="tag-python">Python</span>
+                                <span class="tag-ml">Machine Learning</span>
+                                <span class="tag-nlp">Bayesian Optimization</span>
+                                <span class="tag-nn">K-Means Clustering</span>
+                                <span class="tag-r">Distributed Computing</span>
+                                <span class="tag-eda">Ensemble Modeling</span>
+                                <span class="tag-individual">Individual</span>
+                                <span class="tag-academic">Independent</span>
+                            </div>
+                        </div>
+
+                        <!-- Project 8 -->
+                        <div class="project">
+                            <img src="images/TL.png" alt="Project 8">
+                            <h3>Transfer Learning using VGG16</h3>
+                            <p>Applied the concepts learned in the Transfer Learning using VGG16. Trained three models:
+                                <li>Using VGG-16 pre-trained network without Fully Connected layers and initialize all the weights with Imagenet trained weights.</li>
+                                <li>After the VGG-16 network without FC layers, adding a new Conv block, 2 FC layers, and an output layer to classify 16 classes.</li>
+                                <li>Final architecture will be INPUT, VGG-16 without Top layers(FC), Conv Layer, Maxpool Layer, 2 FC layers, and an Output Layer.</li>
+                                Summary after training the models:
+                                No. of trainable parameters for model3 > model2 > model1. Validation accuracy for model2 and model1 is more or less the same Since we used pre-trained Vgg16 model without training its params.</p>
+                            <div class="tags">
+                                <span class="tag-python">Python</span>
+                                <span class="tag-ml">Tensorflow</span>
+                                <span class="tag-r">Deep Learning</span>
+                                <span class="tag-nn">Transfer Learning</span>
+                                <span class="tag-eda">Convolutional Neural Network</span>
+                                <span class="tag-individual">Individual</span>
+                                <span class="tag-academic">Academic</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <img src="images/mit_cropped.png" alt="" width="100" height="100" style="display: inline-block; border-radius: 10px; transition: transform 0.3s ease;">
-        </header>
-        <p><br/>I am Mithil Gaonkar, Previously a Data Scientist at Bosch, currently pursuing a Master's in Data Science.<br/>
-            I ranked in the top 2% All India Rank for the GATE Computer Science exam, a highly competitive test for students preparing for a Master's degree in Computer Science.
-            Known for my curious and analytical mind, I possess a keen eye for detail, often uncovering nuanced insights in data that others may overlook. This passion for working with data led me to pursue a Master's in Data Science at the University at Buffalo, where I am currently enrolled.<br/>
-            During my academic journey, I delved deep into various machine learning and Deep Learning techniques, honing my skills in building end-end Machine Learning Pipelines. Additionally, I served as a Teaching Assistant, mentoring 240 students in designing BCNF-compliant relational database systems, optimizing PostgreSQL query execution by analyzing problematic queries and improving search efficiency through indexing.<br/>
-            I am seeking opportunities to leverage my extensive Machine Learning background alongside my newfound expertise in LLM's, propelling my career to new heights.</p>
+        </div>
     </div>
-</section>
 
-<!-- Skills Section -->
-<section id="banner">
-    <div class="content">
-        <header style="display: flex; justify-content: space-between; align-items: center;">
-            <div style="display: inline-block;">
-                <h1>Skills</h1>
-            </div>
-        </header>
-        <li><strong>Languages & Frameworks: </strong> R, Matlab, Python(Numpy, Pandas, Matplotlib, Spacy, Scrapy, Beautiful Soup, PySpark, Flask, NLTK, Scikit-learn, TensorFlow, PyTorch, Hugging Face), C++, REST API, Object Oriented Programming.</li>
-        <li><strong>Data & Tools: </strong> SQL, PostgreSQL, Vector DB, AWS(S3, EC2, EBS), Git, Linux, Streamlit, Databricks, Docker, CI/CD.</li>
-        <li><strong>Domains: </strong> Data Science, Machine Learning, Deep Learning, NLP, Distributed Computing, Big Data, LLM, Langchain, RAG, Prompt Engineering.</li>
-    </div>
-</section>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // Menu Toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('#sidebar').classList.toggle('active');
+        });
 
+        // Close sidebar when clicking outside
+        document.addEventListener('click', function(event) {
+            const sidebar = document.querySelector('#sidebar');
+            const menuToggle = document.querySelector('.menu-toggle');
+            
+            if (!sidebar.contains(event.target) && !menuToggle.contains(event.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
 
-<!-- Projects Section -->
-<section id="projects">
-    <div class="content">
-        <header>
-            <h1 style="text-align: center;">PROJECT GALLERY</h1>
-            <p style="text-align: center;">NOTE: GitHub repositories are accessible through the menu on the left.</p>
-        </header>
-    </div>
+        // Scroll Progress
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
 
-    <div class="gallery">
-        <!-- Project 1 -->
-        <div class="project">
-            <img src="images/food_review.png" alt="Project 1">
-            <h3>Food Reviews Classification Using BERT and MLFlow.</h3>
-            <p>
-                Constructed an end-end pipeline for classifying reviews utilizing BERT embeddings enhancing model accuracy to 92.1% from previous best, which is 76%
-            </p>
-            <p>
-                Monitored and experimented with the model via MLFlow; developed a Flask-based web app deploying on AWS EC2 instance. Pipeline handled data preprocessing, including HTML tag removal using Beautiful Soup, Bert tokenization, and model prediction workflow.
-            </p>
-            <div class="tags">
-                <span class="tag-python">Python</span>
-                <span class="tag-clustering">Tensorflow</span>
-                <span class="tag-clustering">NLP</span>
-                <span class="tag-clustering">MLFlow</span>
-                <span class="tag-clustering">AWS</span>
-                <span class="tag-clustering">Flask</span>
-                <span class="tag-ml">Transformers</span>
-                <span class="tag-clustering">BERT</span>
-                <span class="tag-group">Individual</span>
-                <span class="tag-independent">Independent</span>
-            </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project">
-            <img src="images/Doc_class_CNN.jpeg" alt="Project 2">
-            <h3>Low Latency Text Document Classifier Using CNN.</h3>
-            <p>
-                Implemented a document classifier using CNN architecture, capable of categorizing 18,828 text documents into 20 classes(doc formats) with latency less than 0.4ms leveraging pre-trained Glove and char-level embeddings
-            </p>
-            <p>
-                Model 1: Word embeddings are based on a pre-trained Glove vector where each embedding has a size of 300 dimensions. Model 2: Char CNN char embeddings are based on pre-trained char embeddings which can be downloaded
-            </p>
-            <div class="tags">
-                <span class="tag-python">Python</span>
-                <span class="tag-clustering">Tensorflow</span>
-                <span class="tag-nlp">NLP</span>
-                <span class="tag-ml">Machine Learning</span>
-                <span class="tag-nn">Neural Networks</span>
-                <span class="tag-individual">Individual</span>
-                <span class="tag-independent">Independent</span>
-            </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project">
-            <img src="images/vqa.png" alt="Project 3">
-            <h3>Multi-Modal Learning for Visual Question Answering.</h3>
-            <p>
-                Developed a Multi-modal solution to answer open-ended questions about images; Implemented a vanilla Visual Question Answering (VQA) model following the initial VQA paper, attaining impressive accuracy with low latency. 
-                Experimented with LLM, BERT, and LSTM with Glove embeddings for text encoding, Vgg-16, ResNet-50, and custom Densenet model for image encoding, elevating performance by 10% compared to the benchmark model. Performed extensive Exploratory Data Analysis on Input Questions (Text Data) deriving key information and Conducted analysis on Images, finding aspect ratio, number of channels and pixel intensity of the images.
-            </p>
-            <div class="tags">
-                <span class="tag-python">Python</span>
-                <span class="tag-ml">Tensorflow</span>
-                <span class="tag-eda">Deep Learning</span>
-                <span class="tag-stats">NLP</span>
-                <span class="tag-algorithms">Computer Vision</span>
-                <span class="tag-r">Distributed Computing</span>
-                <span class="tag-group">Individual</span>
-                <span class="tag-academic">Academic</span>
-            </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="project">
-            <img src="images/ab-testing.png" alt="Project 4">
-            <h3>Marketing Advertisement Experimentation.</h3>
-            <p>
-                Business Objective: As a product data scientist at a leading marketing firm, goal is to meticulously design, execute, and analyze an A/B experiment that pits a traditional product advertisement against a Public Service Announcement (PSA).
-            </p>
-            <p>
-                Implemented A/B testing to gauge the relative effectiveness of advertisements versus public announcements on consumer conversion rates. Identified conversion trends like peak days and hours-for-ads through detailed data analysis and visualization. Conducted chi-squared and confidence interval tests to confirm statistical significance, and calculated the sample size for 80% power, achieving a 31.2% uplift in conversion rate.
-            </p>
-            <div class="tags">
-                <span class="tag-python">AB Testing</span>
-                <span class="tag-stats">Python</span>
-                <span class="tag-algorithms">Statistical Analysis</span>
-                <span class="tag-eda">Exploratory Data Analysis</span>
-                <span class="tag-individual">Individual</span>
-                <span class="tag-independent">Independent</span>
-            </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="project">
-            <img src="images/audio.jpeg" alt="Project 5">
-            <h3>Speech Detection Using Augmented Deep Learning.</h3>
-            <p>
-                Led a team of two to reduce overfitting on audio data by leveraging the Librosa library for data augmentation, generating raw audio samples and spectrogram data. Performed Exploratory Data Analysis on Audio samples; 
-                Conducted extensive feature engineering to create four distinct audio datasets that improved the model performance. Trained Four LSTM models on four different feature engineered datasets and observed an F1-score improvement from 32% on spectrogram data to 81% on raw data. 
-                In addition, used Tensorflow callbacks such as Tensorboard, Model Checkpointing and implemented a custom AUC score callback.
-            </p>
-            <div class="tags">
-                <span class="tag-r">Tensorflow</span>
-                <span class="tag-algorithms">Deep Learning</span>
-                <span class="tag-ds">Audio Data</span>
-                <span class="tag-eda">LSTM</span>
-                <span class="tag-stats">Multi-class classification</span>
-                <span class="tag-individual">Group</span>
-                <span class="tag-academic">Academic</span>
-            </div>
-        </div>
-
-        <!-- Project 6 -->
-        <div class="project">
-            <img src="images/oil_prices.png" alt="Project 6">
-            <h3>Multivariate Oil Prices Forecasting.</h3>
-            <p>
-                Led a team of 4 to create ETS, Holt-Winters, and ARIMA time series models to predict oil prices from non-stationary time series, conduct ADF tests for stationarity, and implement moving average-based missing value imputation.
-                Performed Exploratory Data Analysis to find trend and seasonality of the time series. In fact, the decomposition plot revealed seasonality in time-series. Moreover, first order differencing resulted in stationary time-series. Residual analysis to check model adequacy and used QQ plot to check if residuals are normally distributed.
-                Based on RMSE and visual assessment of the forecast plots, the ARIMA(1,1,1) model was chosen for its superior performance in forecasting oil prices.
-            </p>
-            <div class="tags">
-                <span class="tag-python">R</span>
-                <span class="tag-ml">Time Series Forecasting</span>
-                <span class="tag-eda">Exploratory Data Analysis</span>
-                <span class="tag-nlp">Residual Analysis</span>
-                <span class="tag-individual">Group</span>
-                <span class="tag-independent">Academic</span>
-            </div>
-        </div>
-
-        <!-- Project 7 -->
-        <div class="project">
-            <img src="images/taxi_demand.png" alt="Project 7">
-            <h3>Taxi Demand Prediction</h3>
-            <p>
-                Goal is to predict the demand for the taxi, given a pickup location (longitude and latitude). Boosted model pipeline efficiency using Dask for distributed computing, handling large datasets over 20 GB.
-            </p>
-            <p>
-                Performed Extensive Exploratory Data analysis on the DataFrame using Dask's lazy evaluation method.
-                Enhanced feature engineering with statistical tests and K-Means clustering for pickup locations based on longitude and latitude, optimized by Silhouette score. Moreover, used Bayesian hyper-opt technique to tune the hyperparameters. Trained an XGBoost and Random Forest Regressor on the data resulting in best test MAPE of 1.02
-            </p>
-            <div class="tags">
-                <span class="tag-python">Python</span>
-                <span class="tag-ml">Machine Learning</span>
-                <span class="tag-nlp">Bayesian Optimization</span>
-                <span class="tag-nn">K-Means Clustering</span>
-                <span class="tag-r">Distributed Computing</span>
-                <span class="tag-eda">Ensemble Modeling</span>
-                <span class="tag-individual">Individual</span>
-                <span class="tag-academic">Independent</span>
-            </div>
-        </div>
-
-        <!-- Project 8 -->
-        <div class="project">
-            <img src="images/TL.png" alt="Project 8">
-            <h3>Transfer Learning using VGG16</h3>
-            <p>
-                Applied the concepts learned in the Transfer Learning using VGG16. Trained three models:
-                <li>Using VGG-16 pre-trained network without Fully Connected layers and initialize all the weights with Imagenet trained weights.</li>
-                <li>After the VGG-16 network without FC layers, adding a new Conv block, 2 FC layers, and an output layer to classify 16 classes.</li>
-                <li>Final architecture will be INPUT, VGG-16 without Top layers(FC), Conv Layer, Maxpool Layer, 2 FC layers, and an Output Layer.</li>
-                Summary after training the models:
-                No. of trainable parameters for model3 > model2 > model1. Validation accuracy for model2 and model1 is more or less the same Since we used pre-trained Vgg16 model without training its params.
-            </p>
-            <div class="tags">
-                <span class="tag-python">Python</span>
-                <span class="tag-ml">Tensorflow</span>
-                <span class="tag-r">Deep Learning</span>
-                <span class="tag-nn">Transfer Learning</span>
-                <span class="tag-eda">Convolutional Neural Network</span>
-                <span class="tag-individual">Individual</span>
-                <span class="tag-academic">Academic</span>
-            </div>
-        </div>
-    </div>
-</section>
-                
-<!-- Education Section -->
-<section id="banner">
-    <div class="content">
-        <header style="display: flex; justify-content: space-between; align-items: center;">
-            <div style="display: inline-block;">
-                <h1>Education</h1>
-            </div>
-        </header>
-        
-        <h3>Master of Science in Data Science</h3>
-        
-        <h5>University at Buffalo, SUNY, New York, United States.</h5>
-        <strong>Relevant Courses: </strong> Statistical Learning & Data Mining, Probability, Linear Algebra, Machine Learning, Natural Language Processing, Computer Vision and Image Processing, Data Structures & Algorithms, Database Query Language(PostgreSQL).
-        <p></p>
-        <h3>Bachelor of Engineering in Electronics and Communication</h3>
-        <h5>National Institute of Engineering, Mysore, India.</h5>
-        <strong>Relevant Courses: </strong>Database Systems, Algorithms, Object Oriented Design, Git Workflows, Machine Learning.
-    </div>
-</section>
-
-<!-- Work Experience Section -->
-<section id="banner">
-    <div class="content">
-        <header style="display: flex; justify-content: space-between; align-items: center;">
-            <div style="display: inline-block;">
-                <h1>Work Experience</h1>
-            </div>
-        </header>
-        
-        <h4>Graduate Teaching Assistant, University at Buffalo <span style="font-weight: normal;">(Jan 2024 - May 2024)</span></h4>
-        <p></p>
-        <h4>Data Science Intern, AAIC Technologies <span style="font-weight: normal;">(Aug 2022 - Jan 2023)</span></h4>
-        <p></p>
-        <h4>Data Scientist, Bosch <span style="font-weight: normal;">(Aug 2020 - Aug 2022)</span></h4>
-    </div>
-</section>
-
-<!-- Sidebar -->
-<div id="sidebar">
-    <div class="inner">
-        <!-- Menu -->
-        <nav id="menu">
-            <header class="major">
-                <h2>Menu</h2>
-            </header>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-
-                <li>
-                    <span class="opener">Academic Projects</span>
-                    <ul>
-                        <li><a href="https://github.com/Mithil01/Visual-Question-Answering-System">Multi-Modal learning for Visual Question Answering.</a></li>
-                        <li><a href="https://github.com/Mithil01/Spoken-Digit-Recognition-Using-Augmented-Deep-Learning">Speech Detection Using Augmented Deep Learning.</a></li>
-                        <li><a href="https://github.com/Mithil01/Oil-Price-Forecasting">Multivariate Oil Prices Forecasting.</a></li>
-                        <li><a href="https://github.com/Mithil01/Transfer-Learning-CNN-Using-VGG16">Transfer Learning using VGG16</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="opener">Independent Projects</span>
-                    <ul>
-                        <li><a href="https://github.com/Mithil01/Food-Review-Classification-Using-BERT">Food Reviews Classification Using BERT and MLFlow.</a></li>
-                        <li><a href="https://github.com/Mithil01/Document-Classification-Using-CNN">Low Latency Text Document Classifier Using CNN.</a></li>
-                        <li><a href="https://github.com/Mithil01/Marketing-ad-campaign-experimentation-">Marketing Advertisement Experimentation.</a></li>
-                        <li><a href="https://github.com/Mithil01/New-York-Taxi-Demand-Prediction">Taxi Demand Prediction</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</div>
-
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
-
-<script>
-    // Menu Toggle
-    document.querySelector('.menu-toggle').addEventListener('click', function() {
-        document.querySelector('#sidebar').classList.toggle('active');
-    });
-
-    // Close sidebar when clicking outside
-    document.addEventListener('click', function(event) {
-        const sidebar = document.querySelector('#sidebar');
-        const menuToggle = document.querySelector('.menu-toggle');
-        
-        if (!sidebar.contains(event.target) && !menuToggle.contains(event.target)) {
-            sidebar.classList.remove('active');
-        }
-    });
-
-    // Scroll Progress
-    window.onscroll = function() {
-        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        let scrolled = (winScroll / height) * 100;
-        document.getElementById("progressBar").style.width = scrolled + "%";
-    };
-
-    // Smooth Scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href'))?.scrollIntoView({
-                behavior: 'smooth'
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href'))?.scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
-    });
 
-    // Remove preload class
-    window.addEventListener('load', function() {
-        document.body.classList.remove('is-preload');
-    });
-
-    // Opener functionality for submenu items
-    document.querySelectorAll('.opener').forEach(opener => {
-        opener.addEventListener('click', function() {
-            this.classList.toggle('active');
-            this.nextElementSibling.style.display = 
-                this.nextElementSibling.style.display === 'none' ? 'block' : 'none';
+        // Remove preload class
+        window.addEventListener('load', function() {
+            document.body.classList.remove('is-preload');
         });
-    });
-</script>
+
+        // Opener functionality for submenu items
+        document.querySelectorAll('.opener').forEach(opener => {
+            opener.addEventListener('click', function() {
+                this.classList.toggle('active');
+                this.nextElementSibling.style.display = 
+                    this.nextElementSibling.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+    </script>
 </body>
 </html>
