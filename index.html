@@ -145,46 +145,83 @@
             margin: 1rem 0;
         }
 
-        /* Sidebar */
-        #sidebar {
-            width: 250px;
-            background: white;
-            position: fixed;
-            height: 100vh;
-            left: 0;
-            top: 0;
-            overflow-y: auto;
-            box-shadow: var(--shadow);
-            z-index: 2;
-        }
+        :root {
+        /* Add gradient colors to your variables */
+        --gradient-start: #2193b0;
+        --gradient-end: #6dd5ed;
+        --sidebar-text: #ffffff;
+        --sidebar-hover: rgba(255, 255, 255, 0.1);
+    }
 
-        #sidebar .inner {
-            padding: 2rem;
-        }
+    /* Update Sidebar Styles */
+    #sidebar {
+        width: 250px;
+        background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+        position: fixed;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        overflow-y: auto;
+        box-shadow: var(--shadow);
+        z-index: 2;
+    }
 
-        #menu ul {
-            list-style: none;
-        }
+    #sidebar .inner {
+        padding: 2rem;
+    }
 
-        #menu ul li {
-            margin-bottom: 0.5rem;
-        }
+    /* Update Menu Styles */
+    #menu h2 {
+        color: var(--sidebar-text);
+    }
 
-        #menu ul li a {
-            color: var(--text-color);
-            text-decoration: none;
-            padding: 10px;
-            display: block;
-            border-radius: 5px;
-            transition: var(--transition);
-        }
+    #menu ul li a {
+        color: var(--sidebar-text);
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+        border-radius: 5px;
+        transition: var(--transition);
+    }
 
-        #menu ul li a:hover {
-            background: var(--primary-color);
-            color: white;
-            transform: translateX(10px);
-        }
+    #menu ul li a:hover {
+        background: var(--sidebar-hover);
+        color: white;
+        transform: translateX(10px);
+    }
 
+    /* Update Opener Styles */
+    #menu .opener {
+        color: var(--sidebar-text);
+        cursor: pointer;
+        display: block;
+        padding: 10px;
+        border-radius: 5px;
+        transition: var(--transition);
+    }
+
+    #menu .opener:hover {
+        background: var(--sidebar-hover);
+        transform: translateX(10px);
+    }
+
+    /* Scrollbar Customization for Sidebar */
+    #sidebar::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    #sidebar::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    #sidebar::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 3px;
+    }
+
+    #sidebar::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.5);
+    }
         /* Tags */
         .tags {
             display: flex;
