@@ -1071,87 +1071,88 @@
     }
 }
 
-.certifications-grid {
+.certifications-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 1rem 0;
+    grid-template-columns: repeat(3, 1fr); /* Shows 3 cards per row */
+    gap: 20px;
+    padding: 20px 0;
 }
 
-.certification-card {
+.cert-card {
     background: white;
-    border-radius: 15px;
-    overflow: hidden;
+    border-radius: 10px;
+    padding: 15px;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-.certification-card:hover {
-    transform: translateY(-10px);
+.cert-card:hover {
+    transform: translateY(-5px);
     box-shadow: var(--hover-shadow);
 }
 
-.certification-image-container {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
+.cert-image {
+    width: 80px;  /* Smaller image size */
+    height: 80px;
+    object-fit: contain;
+    border-radius: 5px;
 }
 
-.certification-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+.cert-details {
+    flex: 1;
 }
 
-.certification-card:hover .certification-image-container img {
-    transform: scale(1.1);
-}
-
-.certification-content {
-    padding: 1.5rem;
-}
-
-.certification-content h3 {
+.cert-details h4 {
     color: var(--gradient-end);
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin-bottom: 5px;
 }
 
-.certification-content p {
+.cert-details p {
     color: #666;
     font-size: 0.9rem;
-    margin-bottom: 1rem;
+    margin-bottom: 8px;
 }
 
-.verify-link {
+.cert-verify {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 8px 16px;
-    border-radius: 8px;
-    background: #f6f8fa;
-    color: #24292e;
+    gap: 5px;
+    font-size: 0.85rem;
+    color: var(--gradient-start);
     text-decoration: none;
     transition: var(--transition);
-    border: 1px solid #e1e4e8;
 }
 
-.verify-link:hover {
-    background: #f3f4f6;
-    transform: translateY(-2px);
-    box-shadow: var(--shadow);
+.cert-verify:hover {
+    transform: translateX(5px);
 }
 
-.verify-link i {
-    color: var(--gradient-start);
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .certifications-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
+    }
 }
 
 @media screen and (max-width: 768px) {
-    .certifications-grid {
-        grid-template-columns: 1fr;
+    .certifications-container {
+        grid-template-columns: 1fr; /* 1 card per row on mobile */
+    }
+    
+    .cert-card {
+        padding: 12px;
+    }
+    
+    .cert-image {
+        width: 60px;
+        height: 60px;
     }
 }       
+ 
        
 </style>
 </head>
@@ -1563,34 +1564,44 @@
     </div>
 </section>
          <section id="certifications">
-                <div class="content">
-                <header style="display: flex; justify-content: space-between; align-items: center;">
-                    <div style="display: inline-block;">
-                    <h1>Certifications</h1>
-                </div>
-                </header>
+    <div class="content">
+        <header style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: inline-block;">
+                <h1>Certifications</h1>
+            </div>
+        </header>
 
-        <div class="certifications-grid">
+        <div class="certifications-container">
             <!-- Certification 1 -->
-            <div class="certification-card">
-                <div class="certification-image-container">
-                    <img src="images/awscert.png" alt="AWS Certification">
-                </div>
-                <div class="certification-content">
-                    <h3>AWS Machine Learning Engineer </h3>
+            <div class="cert-card">
+                <img src="images/awscert.png" alt="Certification 1" class="cert-image">
+                <div class="cert-details">
+                    <h4>AWS Machine Learning</h4>
                     <p>Amazon Web Services</p>
-                    <a href="https://www.credly.com/badges/0017d110-2c05-4af1-9ca0-b12737711e1f" class="verify-link">
-                        <i class="fas fa-certificate"></i>
-                        <span>Verify Credential</span>
+                    <a href="https://www.credly.com/badges/0017d110-2c05-4af1-9ca0-b12737711e1f" class="cert-verify">
+                        <i class="fas fa-external-link-alt"></i>
+                        Verify
                     </a>
                 </div>
             </div>
 
-            <!-- Add more certification cards following the same structure -->
+            <!-- Certification 2 -->
+            <div class="cert-card">
+                <img src="images/cert2.png" alt="Certification 2" class="cert-image">
+                <div class="cert-details">
+                    <h4>LinkedIn Data Engineering</h4>
+                    <p>LinkedIn</p>
+                    <a href="https://www.linkedin.com/learning/certificates/6911e834a9a468d5a39ab637c09a798faedf3c3b924e9dce5d58a176e9bdec60" class="cert-verify">
+                        <i class="fas fa-external-link-alt"></i>
+                        Verify
+                    </a>
+                </div>
+            </div>
+
+            <!-- Add more certification cards as needed -->
         </div>
     </div>
-</section>   
-
+</section>
                  <!-- Skills Section -->
                 <section id="skills">
     <div class="content">
