@@ -1,12 +1,38 @@
 <!DOCTYPE HTML>
+
 <html>
 <head>
-    <title>PORTFOLIO | Mithil Gaonkar</title>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
-   <style>
-    :root {
+<title>
+   PORTFOLIO | Priyadharshan (PD) Manohar
+  </title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<!-- Swiper CSS -->
+<link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+<!-- Swiper JS -->
+<!-- Swiper CSS -->
+<link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+<!-- GLightbox CSS -->
+<link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- Swiper CSS -->
+<link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+<!-- GLightbox CSS -->
+<link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet"/>
+<style>
+    .swiper {
+  width: 100%;
+  height: 320px;
+}
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+   :root {
         --primary-color: #56bdbd;
         --text-color: #333;
         --bg-color: #f8f9fa;
@@ -59,7 +85,7 @@
         box-shadow: var(--shadow);
         position: sticky;
         top: 0;
-        z-index: 1000;
+        z-index: 900;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -85,7 +111,7 @@
 
     /* Name */
     img:hover {
-    transform: scale(1.05) rotate(5deg);
+    /* transform: scale(1.05) rotate(5deg); */
     box-shadow: var(--hover-shadow);
     }
 
@@ -608,9 +634,12 @@
 }
 
 .profile-image-container:hover {
-    transform: scale(1.05);
+    transform: scale(1.5);
     box-shadow: var(--hover-shadow);
+    z-index: 1001 !important;
+    position: relative;
 }
+
 
 .about-content {
     margin-top: 2rem;
@@ -1263,792 +1292,764 @@
         height: 350px;
     }
 }
-       
- 
-       
-</style>
+  </style>
 </head>
 <body class="is-preload">
-
 <!-- Progress Bar -->
-    <div class="progress-container">
-        <div class="progress-bar" id="progressBar"></div>
-    </div>
-
-    <div id="wrapper">
-        <!-- Sidebar -->
-        <div id="sidebar">
-            <div class="inner">
-                <nav id="menu">
-                    <header class="major">
-                        <h2>Menu</h2>
-                    </header>
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#certifications">Certifications</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#education">Education</a></li>
-                        <li><a href="#schedule">Schedule</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-
-        <!-- Main Content -->
-        <div id="main">
-            <div class="inner">
-                <!-- Header -->
-                <header id="header">
-                    <button class="menu-toggle">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                    <a href="index.html" class="logo"><strong>PORTFOLIO</strong></a>
-                    <ul class="icons">
-                        <li><a href="https://www.linkedin.com/in/mithiljeevangaonkar/" class="fab fa-linkedin"></a></li>
-                        <li><a href="https://github.com/Mithil01" class="fab fa-github"></a></li>
-                    </ul>
-                </header>
-
-                <!-- Banner/About Section -->
-                <section id="about">
-    <div class="content">
-        <!-- Header with Name and Image -->
-        <div class="about-header">
-            <div class="name-container">
-                <h2>Mithil Gaonkar</h2>
-                <div class="title-subtitle">Data Scientist & AI Engineer</div>
-            </div>
-            <div class="profile-image-container">
-                <img src="images/mit_cropped.png" alt="Profile Image">
-            </div>
-        </div>
-
-        <!-- About Content -->
-        <div class="about-content">
-            <p>
-                🚀 Bridging the gap between AI research and production as an AI Engineer, I have spent 3+ years of experience leading AI/ML initiatives across Fortune 500 companies, specializing in developing production-grade LLM systems and MLOps pipelines that have driven 2-10% improvements in key metrics. 
-<br/><br/>
-                🧠 Proven expertise in building end-to-end solutions from RAG-based chatbots to large-scale anomaly detection systems handling 1+ TB data on AWS cloud focusing on model optimization  that has reduced costs by 30%<br/><br/>
-                ⚡ My journey has led me from reducing system failures at Bosch using ExplainableAI to developing a cutting-edge GraphRAG Insurance Assistant with 0.95 BERTScore, always focusing on production-ready solutions.<br/><br/>
-                🛠️ Armed with expertise in Deep Learning Optimization, GenAI development, and MLOps, I specialize in making AI systems not just work, but thrive in real-world environments.<br/><br/>
-                💡 Master's in Data Science graduate from the University at Buffalo with research focus in computer vision and efficient deep learning. Served as Teaching Assistant for computer vision course, mentoring 140+ students while conducting research in the field.
-            </p>
-        </div>
-    </div>
+<div class="progress-container">
+<div class="progress-bar" id="progressBar">
+</div>
+</div>
+<div id="wrapper">
+<!-- Sidebar -->
+<div id="sidebar">
+<div class="inner">
+<nav id="menu">
+<header class="major">
+<h2>
+        Menu
+       </h2>
+</header>
+<ul>
+<li>
+<a href="#about">
+         About
+        </a>
+</li>
+<li>
+<a href="#experience">
+         Experience
+        </a>
+</li>
+<li>
+<a href="#projects">
+         Projects
+        </a>
+</li>
+<li>
+<a href="#certifications">
+         Certifications
+        </a>
+</li>
+<li>
+<a href="#skills">
+         Skills
+        </a>
+</li>
+<li>
+<a href="#education">
+         Education
+        </a>
+</li>
+<li>
+<a href="#schedule">
+         Schedule
+        </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<!-- Main Content -->
+<div id="main">
+<div class="inner">
+<!-- Header -->
+<header id="header">
+<button class="menu-toggle">
+<i class="fas fa-bars">
+</i>
+</button>
+<a class="logo" href="index.html">
+<strong>
+        PORTFOLIO
+       </strong>
+</a>
+<ul class="icons">
+<li>
+<a class="fab fa-linkedin" href="https://linkedin.com/in/priyadharshanm">
+</a>
+</li>
+<li>
+<a class="fab fa-github" href="https://github.com/priyadharshanm">
+</a>
+</li>
+</ul>
+</header>
+<!-- Banner/About Section -->
+<section id="about">
+<div class="content">
+<div class="about-header">
+<div class="name-container">
+<h2>
+          Priyadharshan (PD) Manohar
+         </h2>
+<div class="title-subtitle">
+          Software Engineer
+         </div>
+</div>
+<div class="profile-image-container">
+<img alt="Profile Image" src="images/profile.jpeg"/>
+</div>
+</div>
+<div class="about-content">
+<p>
+         👨‍💻 LAMP stack developer with a experience in building scalable, high-performance systems for e-commerce platforms.
+         <br/>
+<br/>
+         ☁️ Proficient in AWS, Kubernetes, Golang, Python, React, and modern DevOps practices.
+         <br/>
+<br/>
+         ⚙️ Successfully migrated microservices, automated CI/CD pipelines, and designed cloud-native applications.
+         <br/>
+<br/>
+         📊 Experienced with monitoring tools like Prometheus and Grafana, and databases including PostgreSQL and MongoDB.
+         <br/>
+<br/>
+         🎓 Master’s in Computer Science from University at Buffalo with hands-on projects in distributed systems and cloud-native architectures.
+        </p>
+</div>
+</div>
 </section>
-
-               
-
-                <!-- Work Experience Section -->
+<!-- Work Experience Section -->
+<!-- Work Experience Section -->
 <section id="experience">
-    <div class="content">
-        <header style="display: flex; justify-content: space-between; align-items: center;">
-            <div style="display: inline-block;">
-                <h1>Work Experience</h1>
-            </div>
-        </header>
-
-        <div class="experience-timeline">
-            <!-- Community Dreams Foundation -->
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div class="title-section">
-                        <h3>AI Engineer</h3>
-                        <div class="company">
-                            <i class="fas fa-building"></i>
-                            <span>Community Dreams Foundation (CDF)</span>
-                        </div>
-                    </div>
-                    <div class="date">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>Aug 2024 - Present</span>
-                    </div>
-                </div>
-                <div class="tech-stack">
-                    <span>LLM</span>
-                    <span>PyTorch</span>
-                    <span>GenAI</span>
-                    <span>RAG Evaluation</span>
-                    <span>Finetuning</span>
-                </div>
-                <div class="achievements">
-                    <div class="achievement">
-                        <i class="fas fa-check-circle"></i>
-                        <p>Developed an enterprise RAG system using LLAMA-2-13B for manufacturing documentation retrieval, implementing MMR and query expansion techniques to achieve BertScore of 0.85 (5% improvement).
-Optimized retrieval pipeline with scalar quantization and HNSW indexing in Qdrant (3.5x latency reduction), implemented contextual compression with recursive chunking.
-</p>
-                    </div>
-                    <div class="achievement">
-                        <i class="fas fa-check-circle"></i>
-                        <p>Built a comprehensive evaluation pipeline using the Opik framework for monitoring retrieval quality and latency.</p>
-                    </div>
-                    <div class="achievement">
-                        <i class="fas fa-check-circle"></i>
-                        <p>Fine-tuned LLAMA-2-13B using supervised fine-tuning on domain-specific manufacturing data(maintenance procedures, equip specs, safety protocols), reducing response time by 10% while maintaining technical accuracy.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Research Assistant -->
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div class="title-section">
-                        <h3>Research Assistant</h3>
-                        <div class="company">
-                            <i class="fas fa-university"></i>
-                            <span>University at Buffalo's School of Public Health</span>
-                        </div>
-                    </div>
-                    <div class="date">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>May 2024 - Aug 2024</span>
-                    </div>
-                </div>
-                <div class="tech-stack">
-                    <span>Deep Learning</span>
-                    <span>Siamese Networks</span>
-                    <span>Computer Vision</span>
-                    <span>PyTorch</span>
-                </div>
-                <div class="achievements">
-                    <div class="achievement">
-                        <i class="fas fa-check-circle"></i>
-                        <p>Developed a Deep Contrastive Learning model using Siamese neural network for facial verification with <strong>93% Specificity</strong>.</p>
-                    </div>
-                    <div class="achievement">
-                        <i class="fas fa-check-circle"></i>
-                        <p>Implemented pair-wise training strategy with contrastive loss for generating discriminative facial embeddings.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bosch -->
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div class="title-section">
-                        <h3>Data Scientist</h3>
-                        <div class="company">
-                            <i class="fas fa-building"></i>
-                            <span>Bosch Global Software Technology</span>
-                        </div>
-                    </div>
-                    <div class="date">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>June 2020 - Nov 2022</span>
-                    </div>
-                </div>
-                <div class="tech-stack">
-                    <span>Python</span>
-                    <span>PyTorch</span>
-                    <span>AWS</span>
-                    <span>PySpark</span>
-                    <span>MLOps</span>
-                </div>
-                <div class="achievements">
-                    <div class="achievement">
-                        <i class="fas fa-check-circle"></i>
-                        <p>Developed an end-end MLOps pipeline for anomaly detection handling large unstructured data(1+ TB) using PySpark on Glue; identified and extracted key features, achieving a 2% reduction in system failures.</p>
-                    </div>
-                    <div class="achievement">
-                        <i class="fas fa-check-circle"></i>
-                        <p>Enhanced <strong>MLOps pipeline </strong> in SageMaker with automated model monitoring and deployment for GLM, XGBoost, and Random Forest models; Integrated Model Monitor with CloudWatch for real-time alerts.</p>
-                    </div>
-                    <div class="achievement">
-                        <i class="fas fa-check-circle"></i>
-                        <p>Trained <strong>Variational Auto-encoder model on Sagemaker </strong>, detecting anomalies through reconstruction loss patterns with <strong>95% accuracy</strong>, significantly outperforming previous statistical methods.</p>
-                    </div>
-                    <div class="achievement">
-                        <i class="fas fa-check-circle"></i>
-                        <p>Implemented <strong> SageMaker data capture to monitor near real-time feature attribution drift(w/ NDCG)  and model quality degradation, </strong>  setting up automated baseline deviations tracking that detected <strong> data drift within  0.4 hours. </strong></p>
-                    </div>
-                    <div class="achievement">
-                        <i class="fas fa-check-circle"></i>
-                        <p>Orchestrated <strong> Bayesian Optimization in SageMaker Clarify </strong> for <strong> automated hyperparameter tuning </strong> and feature selection, <strong> reducing model training time by 40%  </strong> while maintaining 95% accuracy.</p>
-                    </div>
-                    <div class="achievement">
-                        <i class="fas fa-check-circle"></i>
-                        <p>Integrated <strong> TreeSHAP for model interpretability </strong>, identifying 15 key features and reducing failure diagnosis time from 4 days to 1 day.</p></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="content">
+<header>
+<h1>
+         Work Experience
+        </h1>
+</header>
+<div class="experience-timeline">
+<div class="experience-item">
+<div class="experience-header">
+<div class="title-section">
+<h3>
+            Volunteer Research Assistant
+           </h3>
+<div class="company">
+<i class="fas fa-university">
+</i>
+            UB Maternal Health Research
+           </div>
+</div>
+<div class="date">
+<i class="far fa-calendar-alt">
+</i>
+           Aug 2024 – Present
+          </div>
+</div>
+<div class="achievements">
+<div class="achievement">
+<i class="fas fa-check-circle">
+</i>
+<p>
+            Wrote SAS code to clean and analyze maternal health data, reducing manual effort and improving accuracy.
+           </p>
+</div>
+</div>
+</div>
+<div class="experience-item">
+<div class="experience-header">
+<div class="title-section">
+<h3>
+            Software Engineer
+           </h3>
+<div class="company">
+<i class="fas fa-building">
+</i>
+            Landmark Group, India
+           </div>
+</div>
+<div class="date">
+<i class="far fa-calendar-alt">
+</i>
+           Jun 2019 – Dec 2022
+          </div>
+</div>
+<div class="achievements">
+    <div class="achievement">
+        <i class="fas fa-check-circle"></i>
+        <p>
+          Revamped and maintained the e-commerce Content Management System (CMS) and Retail Management System (RMS) using PHP (Laravel) and Vue.js, resulting in faster page loads and 25% faster backend response times.
+        </p>
+      </div>
+      
+      <div class="achievement">
+        <i class="fas fa-check-circle"></i>
+        <p>
+          Assisted in vendor onboarding, ensuring smooth data migrations and API integrations for over 200+ merchants.
+        </p>
+      </div>
+      
+      <div class="achievement">
+        <i class="fas fa-check-circle"></i>
+        <p>
+          Implemented Apache Flink for real-time stream processing of inventory data, enabling dynamic stock updates.
+        </p>
+      </div>
+      
+      <div class="achievement">
+        <i class="fas fa-check-circle"></i>
+        <p>
+          Utilized Laravel queues and workers to asynchronously process 10,000+ product image imports/updates per hour for A/B testing of product images, contributing to a 15% increase in click-through rates.
+        </p>
+      </div>
+      
+      <div class="achievement">
+        <i class="fas fa-check-circle"></i>
+        <p>
+          Provided technical support during peak sales, troubleshooting issues, and minimizing disruption for end users.
+        </p>
+      </div>
+      
+</div>
+</div>
+</div>
+</div>
 </section>
-
-                <!-- Projects Section -->
+<!-- Projects Section -->
 <section id="projects">
-    <div class="content">
-        <header style="display: flex; justify-content: space-between; align-items: center;">
-            <div style="display: inline-block;">
-                <h1>PROJECT GALLERY</h1>
-            </div>
-            
-        </header>
-        
-
-        <div class="gallery">
-            <!-- Project 1 -->
-            <div class="project">
-    <div class="project-image-container">
-        <img src="images/InsuranceQA_F.gif" alt="Graph-RAG Insurance Assistant">
-    </div>
-    <div class="project-content">
-        <h3>Graph-RAG based Insurance QA Assistant
-             <div class="project-link-container">
-                <i class="fab fa-github"></i>
-                <a href="https://github.com/Mithil01/Hybrid-Search-GraphRAG" class="view-project">
-                    GitHub
-                </a>
-            </div>
-        </h3>
-        <div class="project-description">
-            <p>
-                Architected a Graph-RAG system using Neo4j, LlamaIndex, and OpenAI GPT-4 model to build and query an insurance knowledge graph with semantic relationship mapping. 
-                Implemented multi-hop reasoning algorithms for context retrieval, combining vector similarity search and graph traversal to achieve 90% query comprehension accuracy.
-            </p>
-            
-            
-        </div>
-        <div class="tags">
-            <span class="skill-tag tag-nlp">
-                <i class="fas fa-brain"></i>
-                LLM
-            </span>
-            <span class="skill-tag tag-ml">
-                <i class="fas fa-project-diagram"></i>
-                Neo4j
-            </span>
-            <span class="skill-tag tag-dl">
-                <i class="fas fa-robot"></i>
-                GPT-4
-            </span>
-            <span class="skill-tag tag-data">
-                <i class="fas fa-database"></i>
-                Vector DB
-            </span>
-        </div>
-    </div>
+<div class="content">
+<header style="display: flex; justify-content: space-between; align-items: center;">
+<div style="display: inline-block;">
+<h1>
+          PROJECT GALLERY
+         </h1>
 </div>
-
-
-
-            <div class="project">
-    <div class="project-image-container">
-        <img src="images/multi-task_gif.gif" alt="Multi-task Sentence Transformer">
-    </div>
-    <div class="project-content">
-        <h3>Multi-task Learning w/ Mixed Precision Training
+</header>
+<div class="gallery">
+<!-- Project 1: DevOps with Kubernetes and AWS -->
+<div class="project">
+<div class="project-image-container">
+<div class="swiper mySwiper-k8">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<a class="glightbox" data-gallery="gallery1" href="images/k8/p0.png">
+<img alt="Slide 1" src="images/k8/p0.png"/>
+</a>
+</div>
+<div class="swiper-slide">
+<a class="glightbox" data-gallery="gallery1" href="images/k8/p1.png">
+<img alt="Slide 2" src="images/k8/p1.png"/>
+</a>
+</div>
+<div class="swiper-slide">
+<a class="glightbox" data-gallery="gallery1" href="images/k8/p2.png">
+<img alt="Slide 2" src="images/k8/p2.png"/>
+</a>
+</div>
+<div class="swiper-slide">
+<a class="glightbox" data-gallery="gallery1" href="images/k8/p3.png">
+<img alt="Slide 2" src="images/k8/p3.png"/>
+</a>
+</div>
+<div class="swiper-slide">
+<a class="glightbox" data-gallery="gallery1" href="images/k8/p4.png">
+<img alt="Slide 2" src="images/k8/p4.png"/>
+</a>
+</div>
+<div class="swiper-slide">
+<a class="glightbox" data-gallery="gallery1" href="images/k8/p5.png">
+<img alt="Slide 2" src="images/k8/p5.png"/>
+</a>
+</div>
+<div class="swiper-slide">
+<a class="glightbox" data-gallery="gallery1" href="images/k8/p6.png">
+<img alt="Slide 2" src="images/k8/p6.png"/>
+</a>
+</div>
+<div class="swiper-slide">
+<a class="glightbox" data-gallery="gallery1" href="images/k8/p7.png">
+<img alt="Slide 2" src="images/k8/p7.png"/>
+</a>
+</div>
+</div>
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+<div class="swiper-pagination"></div>
+</div>
+</div>
+<div class="project-content">
+<h3>
+           DevOps Project with Kubernetes and AWS
+           <div class="project-link-container">
+<i class="fab fa-github">
+</i>
+<a class="view-project" href="https://github.com/priyadharshanm/k8-go-project">
+             GitHub
+            </a>
+</div>
+</h3>
+<div class="project-description">
+<p>
+            Designed a Go app backed by PostgreSQL and deployed on AWS EKS. Automated CI/CD using CodePipeline, monitored via Prometheus &amp; Grafana, and dynamically scaled using Kubernetes deployments.
+           </p>
+</div>
+<div class="tags">
+<span class="skill-tag tag-aws">
+<i class="fab fa-aws">
+</i>
+            AWS
+           </span>
+<span class="skill-tag tag-python">
+<i class="fas fa-code">
+</i>
+            Golang
+           </span>
+<span class="skill-tag tag-data">
+<i class="fas fa-database">
+</i>
+            PostgreSQL
+           </span>
+<span class="skill-tag tag-ml">
+<i class="fas fa-server">
+</i>
+            Kubernetes
+           </span>
+</div>
+</div>
+</div>
+<!-- Project: Blockchain Music Platform -->
+<div class="project">
+<div class="project-image-container">
+<div class="swiper mySwiper-bc">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<a class="glightbox" data-gallery="gallery2" href="images/bc1.png">
+<img alt="Slide 1" src="images/bc1.png"/>
+</a>
+</div>
+<div class="swiper-slide">
+<a class="glightbox" data-gallery="gallery2" href="images/bc2.png">
+<img alt="Slide 2" src="images/bc2.png"/>
+</a>
+</div>
+<div class="swiper-slide">
+<a class="glightbox" data-gallery="gallery2" href="images/bc3.png">
+<img alt="Slide 3" src="images/bc3.png"/>
+</a>
+</div>
+</div>
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+<div class="swiper-pagination"></div>
+</div>
+</div>
+<div class="project-content">
+<h3>Blockchain based Music Platform
             <div class="project-link-container">
-                <i class="fab fa-github"></i>
-                <a href="https://github.com/Mithil01/Multi-Task-Sentence-Transformer" class="view-project">
+<i class="fab fa-github"></i>
+<a class="view-project" href="https://github.com/priyadharshanm/block-music-dapp">
                     GitHub
                 </a>
-            </div>
-        </h3>
-        <div class="project-description">
-            <p>
-                Developed a single BERT-based transformer architecture to handle both AG News classification (4 classes) and CoNLL2003 NER (9 tags), with emphasis on shared learning and efficient training. Implemented layer-wise learning rates for optimal knowledge transfer. Achieved 50% memory reduction and 2.5x faster training through mixed precision training optimization.
-            </p>
-            
-        </div>
-        <div class="tags">
-            <span class="skill-tag tag-dl">
-                <i class="fas fa-brain"></i>
-                BERT
-            </span>
-            <span class="skill-tag tag-nlp">
-                <i class="fas fa-comments"></i>
-                NLP
-            </span>
-            <span class="skill-tag tag-ml">
-                <i class="fas fa-network-wired"></i>
-                Transformers
-            </span>
-            <span class="skill-tag tag-pytorch">
-                <i class="fas fa-fire"></i>
-                PyTorch
-            </span>
-        </div>
-    </div>
 </div>
-            
-            <!-- Project 2 -->
-            <div class="project">
-                <div class="project-image-container">
-                    <img src="images/doccnn_gif.gif" alt="Document Classification">
-                </div>
-                <div class="project-content">
-                    <h3>Low Latency Text Document Classifier
-                        <div class="project-link-container">
-                                    <i class="fab fa-github" style="color: var(--gradient-start); font-size: 1.2em;"></i>
-                                    <a href="https://github.com/Mithil01/Document-Classification-Using-CNN" class="view-project">
-                                       <strong> GitHub </strong>
-                                    </a>
-                                </div> 
-                    </h3>
-                    
-                    <div class="project-description">
-                        <p>Implemented a document classifier using 1D-CNN architecture, capable of categorizing 18,828 text documents into 20 classes with latency less than 0.4ms.
-                           Utilized pre-trained Glove vector embeddings with 300 dimensions and implemented char-level CNN embeddings for enhanced performance.</p>
-                    </div>
-                    <div class="tags">
-                        <span class="skill-tag tag-python">
-                            <i class="fab fa-python"></i>
-                            Python
-                        </span>
-                        <span class="skill-tag tag-dl">
-                            <i class="fas fa-network-wired"></i>
-                            CNN
-                        </span>
-                        <span class="skill-tag tag-nlp">
-                            <i class="fas fa-comments"></i>
-                            NLP
-                        </span>
-                        <span class="skill-tag tag-ml">
-                            <i class="fas fa-brain"></i>
-                            Machine Learning
-                        </span>
-                    </div>
-                </div>
+</h3>
+<div class="project-description">
+<p>
+                Built a decentralized music platform using Solidity, Sepolia, and Web3.js, enabling transparent royalty distribution.
+                Integrated smart contracts (ERC-721, ERC-1155) for NFT-based ownership and secure music sales.
+            </p>
+</div>
+<div class="tags">
+<span class="skill-tag tag-python"><i class="fas fa-music"></i> Music</span>
+<span class="skill-tag tag-ml"><i class="fas fa-link"></i> Web3.js</span>
+<span class="skill-tag tag-data"><i class="fas fa-coins"></i> Solidity</span>
+<span class="skill-tag tag-aws"><i class="fas fa-shield-alt"></i> NFT</span>
+</div>
+</div>
+</div>
+<!-- Project 2: Fresumes -->
+<div class="project">
+    <div class="project-image-container">
+        <div class="swiper mySwiper-fresumes">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="gallery-fresumes" href="images/fresumes1.png">
+                <img src="images/fresumes1.png" alt="Slide 1" />
+              </a>
             </div>
-
-            <!-- Project 3 -->
-            <div class="project">
-                <div class="project-image-container">
-                    <img src="images/VQA_gif_f.gif" alt="VQA Project">
-                </div>
-                <div class="project-content">
-                    <h3>Distributed Visual Question Answering System
-                        <div class="project-link-container">
-                                    <i class="fab fa-github" style="color: var(--gradient-start); font-size: 1.2em;"></i>
-                                    <a href="https://github.com/Mithil01/Visual-Question-Answering-System" class="view-project">
-                                       <strong> GitHub </strong>
-                                    </a>
-                                </div> 
-                    </h3>
-                    <div class="project-description">
-                        <p>Developed a Multi-modal VQA model achieving impressive accuracy with low latency using BERT and Glove embeddings.
-                           Integrated VGG-16, ResNet-50, and custom Densenet models, achieving 10% performance improvement over benchmark.</p>
-                    </div>
-                    
-                    <div class="tags">
-                        <span class="skill-tag tag-dl">
-                            <i class="fas fa-brain"></i>
-                            Deep Learning
-                        </span>
-                        <span class="skill-tag tag-cv">
-                            <i class="fas fa-camera"></i>
-                            Vision
-                        </span>
-                        <span class="skill-tag tag-nlp">
-                            <i class="fas fa-comments"></i>
-                            NLP
-                        </span>
-                        <span class="skill-tag tag-pytorch">
-                            <i class="fas fa-fire"></i>
-                            PyTorch
-                        </span>
-                    </div>
-                </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="gallery-fresumes" href="images/fresumes2.png">
+                <img src="images/fresumes2.png" alt="Slide 2" />
+              </a>
             </div>
-
-           <div class="project">
-                <div class="project-image-container">
-                    <img src="images/bert.gif" alt="Food Review Classification">
-                </div>
-                <div class="project-content">
-                    <h3> Bert-based Sentiment Analysis Deployment 
-                        <div class="project-link-container">
-                                    <i class="fab fa-github" style="color: var(--gradient-start); font-size: 1.2em;"></i>
-                                    <a href="https://github.com/Mithil01/Food-Review-Classification-Using-BERT" class="view-project">
-                                       <strong> GitHub </strong>
-                                    </a>
-                                </div> 
-                    </h3>
-                    <div class="project-description">
-                        <p>
-                            Constructed an end-end pipeline for classifying reviews utilizing BERT embeddings enhancing model accuracy to 92.1% from previous best, which is 76%. Monitored and experimented with the model via MLFlow; developed a Flask-based web app deploying on AWS EC2 instance. 
-                        </p>
-                    </div>
-            
-                    <div class="tags">
-                         <span class="skill-tag tag-tensorflow">
-                            <i class="fas fa-brain"></i>
-                            TensorFlow
-                         </span>
-                         <span class="skill-tag tag-nlp">
-                            <i class="fas fa-comments"></i>
-                            NLP
-                         </span>
-                         <span class="skill-tag tag-mlflow">
-                            <i class="fas fa-chart-line"></i>
-                            MLFlow
-                         </span>
-                         <span class="skill-tag tag-aws">
-                            <i class="fab fa-aws"></i>
-                            AWS
-                         </span>
-                    </div>
-                </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="gallery-fresumes" href="images/fresumes3.png">
+                <img src="images/fresumes3.png" alt="Slide 3" />
+              </a>
             </div>
-            
-            <!-- Project 5 -->
-            <div class="project">
-                <div class="project-image-container">
-                    <img src="images/speech_gif.gif" alt="Speech Detection">
-                </div>
-                <div class="project-content">
-                    <h3>Speech Detection w/ Augmented Deep Learning
-                        <div class="project-link-container">
-                                    <i class="fab fa-github" style="color: var(--gradient-start); font-size: 1.2em;"></i>
-                                    <a href="https://github.com/Mithil01/Spoken-Digit-Recognition-Using-Augmented-Deep-Learning"" class="view-project">
-                                       <strong> GitHub </strong>
-                                    </a>
-                                </div> 
-                    </h3>
-                   
-                    <div class="project-description">
-                        <p>Developed audio data augmentation pipeline using Librosa library for enhanced model robustness.
-                           Achieved F1-score improvement from 32% to 81% through LSTM model optimization and feature engineering.</p>
-                    </div>
-                    <div class="tags">
-                        <span class="skill-tag tag-dl">
-                            <i class="fas fa-wave-square"></i>
-                            Audio Processing
-                        </span>
-                        <span class="skill-tag tag-tensorflow">
-                            <i class="fas fa-brain"></i>
-                            LSTM
-                        </span>
-                        <span class="skill-tag tag-ml">
-                            <i class="fas fa-cogs"></i>
-                            Deep Learning
-                        </span>
-                    </div>
-                </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="gallery-fresumes" href="images/fresumes4.png">
+                <img src="images/fresumes4.png" alt="Slide 4" />
+              </a>
             </div>
-
-             <!-- Project 4 -->
-            <div class="project">
-                <div class="project-image-container">
-                    <img src="images/ab-testing.png" alt="AB Testing">
-                </div>
-                <div class="project-content">
-                    <h3>Marketing Advertisement Experimentation
-                        <div class="project-link-container">
-                                    <i class="fab fa-github" style="color: var(--gradient-start); font-size: 1.2em;"></i>
-                                    <a href="https://github.com/Mithil01/Marketing-ad-campaign-experimentation-" class="view-project">
-                                       <strong> GitHub </strong>
-                                    </a>
-                                </div> 
-                    </h3>
-                    <div class="project-description">
-                        <p>Designed and executed comprehensive A/B testing framework for advertising campaign optimization.
-                        Achieved 31.2% uplift in conversion rate through statistical analysis and data visualization.</p>
-                    </div>
-                    <div class="tags">
-                        <span class="skill-tag tag-python">
-                            <i class="fab fa-python"></i>
-                            Python
-                        </span>
-                        <span class="skill-tag tag-data">
-                            <i class="fas fa-chart-bar"></i>
-                            Data Analysis
-                        </span>
-                        <span class="skill-tag tag-ml">
-                            <i class="fas fa-calculator"></i>
-                            Statistics
-                        </span>
-                    </div>
-                </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="gallery-fresumes" href="images/fresumes5.png">
+                <img src="images/fresumes5.png" alt="Slide 5" />
+              </a>
             </div>
-
-
-            <!-- Project 6 -->
-            <div class="project">
-                <div class="project-image-container">
-                    <img src="images/oil_prices.png" alt="Oil Price Forecasting">
-                </div>
-                <div class="project-content">
-                    <h3>Multivariate Oil Prices Forecasting
-                        <div class="project-link-container">
-                                    <i class="fab fa-github" style="color: var(--gradient-start); font-size: 1.2em;"></i>
-                                    <a href="https://github.com/Mithil01/Oil-Price-Forecasting" class="view-project">
-                                       <strong> GitHub </strong>
-                                    </a>
-                                </div> 
-                    </h3>
-                
-                    <div class="project-description">
-                        <p>Implemented ETS, Holt-Winters, and ARIMA models for time series forecasting with extensive stationarity testing.
-                           Optimized ARIMA(1,1,1) model through rigorous evaluation and residual analysis for superior forecasting.</p>
-                    </div>
-                    <div class="tags">
-                        <span class="skill-tag tag-data">
-                            <i class="fas fa-chart-line"></i>
-                            Time Series
-                        </span>
-                        <span class="skill-tag tag-ml">
-                            <i class="fas fa-calculator"></i>
-                            Statistical Analysis
-                        </span>
-                        <span class="skill-tag tag-python">
-                            <i class="fab fa-r-project"></i>
-                            R
-                        </span>
-                    </div>
-                </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="gallery-fresumes" href="images/fresumes6.png">
+                <img src="images/fresumes6.png" alt="Slide 6" />
+              </a>
             </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="gallery-fresumes" href="images/fresumes7.png">
+                <img src="images/fresumes7.png" alt="Slide 7" />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="gallery-fresumes" href="images/fresumes8.png">
+                <img src="images/fresumes8.png" alt="Slide 8" />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="gallery-fresumes" href="images/fresumes9.png">
+                <img src="images/fresumes9.png" alt="Slide 9" />
+              </a>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
         </div>
+      </div>
+      
+<div class="project-content">
+<h3>
+           Fresumes: Job Search Portal Revamp
+           <div class="project-link-container">
+
+</div>
+</h3>
+<div class="project-description">
+<p>
+            Led cloud migration and deployed a scalable job portal on AWS using React.js, Node, and MySQL. Integrated real-time resume parsing using SpaCy and Lambda, boosting profile creation rates by 30%.
+           </p>
+</div>
+<div class="tags">
+<span class="skill-tag tag-nlp">
+<i class="fas fa-brain">
+</i>
+            SpaCy
+           </span>
+<span class="skill-tag tag-aws">
+<i class="fab fa-aws">
+</i>
+            Lambda
+           </span>
+<span class="skill-tag tag-data">
+<i class="fas fa-database">
+</i>
+            MySQL
+           </span>
+<span class="skill-tag tag-python">
+<i class="fab fa-react">
+</i>
+            React.js
+           </span>
+</div>
+</div>
+</div>
+<!-- Project 3: Distributed Systems -->
+<div class="project">
+    <div class="project-image-container">
+        <a href="videos/raft_demo.mov" 
+           class="glightbox" 
+           data-gallery="gallery-raft" 
+           data-type="video">
+          <video autoplay muted loop playsinline 
+                 style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            <source src="videos/raft_demo.mov" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </a>
+      </div>
+      
+
+    <div class="project-content">
+      <h3>
+        Distributed Systems: Raft and K-DHT
+        <div class="project-link-container">
+
+        </div>
+      </h3>
+      <div class="project-description">
+        <p>
+          Built Raft consensus algorithm and Kademlia-DHT in Go for real-time communication and failover resilience. Included heartbeat detectors, test suites, and leader election for reliability.
+        </p>
+      </div>
+      <div class="tags">
+        <span class="skill-tag tag-ml">
+          <i class="fas fa-code"></i> Golang
+        </span>
+        <span class="skill-tag tag-data">
+          <i class="fas fa-project-diagram"></i> Distributed Systems
+        </span>
+        <span class="skill-tag tag-python">
+          <i class="fas fa-network-wired"></i> Raft
+        </span>
+      </div>
     </div>
+  </div>
+  
+</div>
+</div>
 </section>
-         <section id="certifications">
-    <div class="content">
-        <header style="display: flex; justify-content: space-between; align-items: center;">
-            <div style="display: inline-block;">
-                <h1>Certifications</h1>
-            </div>
-        </header>
+<section id="certifications">
+<div class="content">
+<header style="display: flex; justify-content: space-between; align-items: center;">
+<div style="display: inline-block;">
+<h1>
+          Certifications
+         </h1>
+</div>
+</header>
+<div class="certifications-container">
+<!-- Certification 1 -->
+<div class="cert-card">
+<img alt="Certification 1" class="cert-image" src="images/awscert.png"/>
+<div class="cert-details">
+<h4>
+           AWS Certified Developer - Associate
+          </h4>
+<p>
+           Amazon Web Services
+          </p>
+<a class="cert-verify" href="https://www.credly.com/badges/e2fa09cd-00d8-4587-8817-5f8b0428ccd5/public_url">
+<i class="fas fa-external-link-alt">
+</i>
+           Verify
+          </a>
+</div>
+</div>
+<!-- Certification 2 -->
+<div class="cert-card">
+<img alt="Certification 2" class="cert-image" src="images/linkedincert.jpeg"/>
+<div class="cert-details">
+<h4>
+            Cisco - Data Communications and Network Services
+          </h4>
+<p>
+           Coursera
+          </p>
+<a class="cert-verify" href="https://coursera.org/share/3711eee487ec2f95ad95d6d0e80baf74">
 
-        <div class="certifications-container">
-            <!-- Certification 1 -->
-            <div class="cert-card">
-                <img src="images/awscert.png" alt="Certification 1" class="cert-image">
-                <div class="cert-details">
-                    <h4>AWS Machine Learning</h4>
-                    <p>Amazon Web Services</p>
-                    <a href="https://www.credly.com/badges/0017d110-2c05-4af1-9ca0-b12737711e1f" class="cert-verify">
-                        <i class="fas fa-external-link-alt"></i>
-                        Verify
-                    </a>
-                </div>
-            </div>
-
-            <!-- Certification 2 -->
-            <div class="cert-card">
-                <img src="images/linkedincert.jpeg" alt="Certification 2" class="cert-image">
-                <div class="cert-details">
-                    <h4>LinkedIn Data Engineering</h4>
-                    <p>LinkedIn</p>
-                    <a href="https://www.linkedin.com/learning/certificates/6911e834a9a468d5a39ab637c09a798faedf3c3b924e9dce5d58a176e9bdec60" class="cert-verify">
-                        <i class="fas fa-external-link-alt"></i>
-                        Verify
-                    </a>
-                </div>
-            </div>
-
-            <!-- Certification 3 -->
-            <div class="cert-card">
-                <img src="images/kagglecert.png" alt="Certification 3" class="cert-image">
-                <div class="cert-details">
-                    <h4>Time Series Forecasting</h4>
-                    <p>Kaggle</p>
-                    <a href="https://www.kaggle.com/learn/certification/mithilgaonkar/time-series" class="cert-verify">
-                        <i class="fas fa-external-link-alt"></i>
-                        Verify
-                    </a>
-                </div>
-            </div>
-
-          
-        </div>
-    </div>
+           Verify
+          </a>
+</div>
+</div>
+<!-- Certification 3 -->
+<div class="cert-card">
+<img alt="Certification 3" class="cert-image" src="images/kagglecert.png"/>
+<div class="cert-details">
+<h4>
+           Web development by doing: HTML/CSS from scratch
+          </h4>
+<p>
+           Udemy
+          </p>
+<a class="cert-verify" href="https://www.udemy.com/certificate/UC-0DY6MGKE/">
+<i class="fas fa-external-link-alt">
+</i>
+           Verify
+          </a>
+</div>
+</div>
+</div>
+</div>
 </section>
-                 <!-- Skills Section -->
-                <section id="skills">
-    <div class="content">
-        <header style="display: flex; justify-content: space-between; align-items: center;">
-            <div style="display: inline-block;">
-                <h1>Skills</h1>
-            </div>
-        </header>
-        
-        <!-- Languages & Frameworks -->
-        <div class="skills-category">
-            <div class="skill-header">
-                <i class="fas fa-code"></i>
-                <strong>Languages & Frameworks</strong>
-            </div>
-            <div class="skill-items">
-                <span class="skill-item"><i class="fab fa-python"></i> Python</span>
-                <span class="skill-item"><i class="fab fa-r-project"></i> R</span>
-                <span class="skill-item"><i class="fas fa-square-root-alt"></i> Matlab</span>
-                <span class="skill-item"><i class="fas fa-brain"></i> TensorFlow</span>
-                <span class="skill-item"><i class="fas fa-fire"></i> PyTorch</span>
-                <span class="skill-item"><i class="fas fa-robot"></i> Hugging Face</span>
-                <span class="skill-item"><i class="fas fa-chart-bar"></i> Numpy/Pandas</span>
-                <span class="skill-item"><i class="fas fa-server"></i> PySpark</span>
-                <span class="skill-item"><i class="fas fa-spider"></i> Scrapy</span>
-                <span class="skill-item"><i class="fas fa-flask"></i> Flask</span>
-                <span class="skill-item"><i class="fas fa-cogs"></i> NLTK</span>
-                <span class="skill-item"><i class="fas fa-rocket"></i> Scikit-learn</span>
-                <span class="skill-item"><i class="fas fa-code-branch"></i> REST API</span>
-                <span class="skill-item"><i class="fas fa-cube"></i> OOP</span>
-            </div>
-        </div>
+<!-- Skills Section -->
+<section id="skills">
+<div class="content">
+<header style="display: flex; justify-content: space-between; align-items: center;">
+<div style="display: inline-block;">
+<h1>
+          Skills
+         </h1>
+</div>
+</header>
+<!-- Languages & Frameworks -->
+<!-- Data & Tools -->
+<!-- Domains -->
+<div class="skills-category">
+<div class="skill-header">
+<i class="fas fa-code">
+</i>
+<strong>
+          Languages &amp; Frameworks
+         </strong>
+</div>
+<div class="skill-items">
+<span class="skill-item">
+          Python
+         </span>
+<span class="skill-item">
+          Golang
+         </span>
+<span class="skill-item">
+          React.js
+         </span>
+<span class="skill-item">
+          Vue.js
+         </span>
+<span class="skill-item">
+          PHP (Laravel)
+         </span>
+<span class="skill-item">
+          JavaScript
+         </span>
+</div>
+</div>
+<div class="skills-category">
+<div class="skill-header">
+<i class="fas fa-database">
+</i>
+<strong>
+          Databases &amp; Tools
+         </strong>
+</div>
+<div class="skill-items">
+<span class="skill-item">
+          MySQL
+         </span>
+<span class="skill-item">
+          PostgreSQL
+         </span>
+<span class="skill-item">
+          MongoDB
+         </span>
+<span class="skill-item">
+          RDS
+         </span>
+<span class="skill-item">
+          Git
+         </span>
+<span class="skill-item">
+          VSCode
+         </span>
+</div>
+</div>
+<div class="skills-category">
+<div class="skill-header">
+<i class="fas fa-cloud">
+</i>
+<strong>
+          DevSecOps &amp; Monitoring
+         </strong>
+</div>
+<div class="skill-items">
+<span class="skill-item">
+          AWS (EC2, S3, Lambda, RDS, ECS, EKS, CodePipeline)
+         </span>
+<span class="skill-item">
+          Kubernetes
+         </span>
+<span class="skill-item">
+          Docker
+         </span>
+<span class="skill-item">
+          Prometheus
+         </span>
+<span class="skill-item">
+          Grafana
+         </span>
+</div>
+</div>
+</div>
+<section id="education">
+<div class="content">
+<header>
+<h1>
+          Education
+         </h1>
+</header>
+<div class="education-container">
 
-        <!-- Data & Tools -->
-        <div class="skills-category">
-            <div class="skill-header">
-                <i class="fas fa-database"></i>
-                <strong>Data & Tools</strong>
-            </div>
-            <div class="skill-items">
-                <span class="skill-item"><i class="fas fa-database"></i> SQL/PostgreSQL</span>
-                <span class="skill-item"><i class="fab fa-aws"></i> AWS (EC2, S3, EBS)</span>
-                <span class="skill-item"><i class="fas fa-cube"></i> Vector DB</span>
-                <span class="skill-item"><i class="fab fa-git-alt"></i> Git</span>
-                <span class="skill-item"><i class="fab fa-linux"></i> Linux</span>
-                <span class="skill-item"><i class="fas fa-stream"></i> Streamlit</span>
-                <span class="skill-item"><i class="fas fa-infinity"></i> Databricks</span>
-                <span class="skill-item"><i class="fab fa-docker"></i> Docker</span>
-                <span class="skill-item"><i class="fas fa-sync"></i> CI/CD</span>
-            </div>
+    <div class="education-item">
+      <div class="education-icon">
+        <i class="fas fa-graduation-cap"></i>
+      </div>
+      <div class="education-content">
+        <h3>MS in Computer Science</h3>
+        <div class="university">
+          <i class="fas fa-university"></i>
+          University at Buffalo, SUNY
+          <span style="margin-left: auto; font-size: 0.9rem; color: #888;">Jan 2023 – May 2024</span>
         </div>
-
-        <!-- Domains -->
-        <div class="skills-category">
-            <div class="skill-header">
-                <i class="fas fa-brain"></i>
-                <strong>Domains</strong>
-            </div>
-            <div class="skill-items">
-                <span class="skill-item"><i class="fas fa-chart-network"></i> Data Science</span>
-                <span class="skill-item"><i class="fas fa-robot"></i> Machine Learning</span>
-                <span class="skill-item"><i class="fas fa-brain"></i> Deep Learning</span>
-                <span class="skill-item"><i class="fas fa-comments"></i> NLP</span>
-                <span class="skill-item"><i class="fas fa-network-wired"></i> Distributed Computing</span>
-                <span class="skill-item"><i class="fas fa-database"></i> Big Data</span>
-                <span class="skill-item"><i class="fas fa-robot"></i> LLM</span>
-                <span class="skill-item"><i class="fas fa-link"></i> Langchain</span>
-                <span class="skill-item"><i class="fas fa-project-diagram"></i> RAG</span>
-                <span class="skill-item"><i class="fas fa-magic"></i> Prompt Engineering</span>
-            </div>
-        </div>
+      </div>
     </div>
-               <section id="education">
-    <div class="content">
-        <header style="display: flex; justify-content: space-between; align-items: center;">
-            <div style="display: inline-block;">
-                <h1>Education</h1>
-            </div>
-        </header>
-
-        <div class="education-container">
-            <!-- Masters Degree -->
-            <div class="education-item">
-                <div class="education-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <div class="education-content">
-                    <h3>Master of Science in Data Science</h3>
-                    <div class="university">
-                        <i class="fas fa-university"></i>
-                        <h5>University at Buffalo, SUNY, New York, United States</h5>
-                    </div>
-                    <div class="courses">
-                        <div class="courses-header">
-                            <i class="fas fa-book"></i>
-                            <strong>Relevant Courses:</strong>
-                        </div>
-                        <div class="course-tags">
-                            <span>Statistical Learning & Data Mining</span>
-                            <span>Probability</span>
-                            <span>Linear Algebra</span>
-                            <span>Machine Learning</span>
-                            <span>Natural Language Processing</span>
-                            <span>Computer Vision</span>
-                            <span>Data Structures & Algorithms</span>
-                            <span>Database Systems (PostgreSQL)</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bachelors Degree -->
-            <div class="education-item">
-                <div class="education-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <div class="education-content">
-                    <h3>Bachelor of Engineering in Electronics and Communication</h3>
-                    <div class="university">
-                        <i class="fas fa-university"></i>
-                        <h5>National Institute of Engineering, Mysore, India</h5>
-                    </div>
-                    <div class="courses">
-                        <div class="courses-header">
-                            <i class="fas fa-book"></i>
-                            <strong>Relevant Courses:</strong>
-                        </div>
-                        <div class="course-tags">
-                            <span>Database Systems</span>
-                            <span>Algorithms</span>
-                            <span>Object Oriented Design</span>
-                            <span>Git Workflows</span>
-                            <span>Machine Learning</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  
+    <div class="education-item">
+      <div class="education-icon">
+        <i class="fas fa-graduation-cap"></i>
+      </div>
+      <div class="education-content">
+        <h3>BTech in Computer Science</h3>
+        <div class="university">
+          <i class="fas fa-university"></i>
+          Vellore Institute of Technology
+          <span style="margin-left: auto; font-size: 0.9rem; color: #888;">Jun 2015 – May 2019</span>
         </div>
+      </div>
     </div>
+  
+  </div>
+  
+  
+</div>
 </section>
-
 <section id="schedule">
     <div class="content">
-        <header style="display: flex; justify-content: space-between; align-items: center;">
-            <div style="display: inline-block;">
-                <h1>Let's Connect</h1>
+      <header style="display: flex; justify-content: space-between; align-items: center;">
+        <div style="display: inline-block;">
+          <h1>Let's Connect</h1>
+        </div>
+      </header>
+  
+      <div class="meeting-container">
+        <div class="meeting-info">
+          <div class="meeting-header">
+            <i class="fas fa-handshake"></i>
+            <p>Schedule a quick chat or get in touch directly:</p>
+          </div>
+  
+          <div class="meeting-options">
+            <div class="meeting-option">
+              <i class="fas fa-envelope"></i>
+              <span>priyadharshanm1706@gmail.com</span>
             </div>
-        </header>
+            <div class="meeting-option">
+              <i class="fas fa-phone-alt"></i>
+              <span>+1 (716) 253-5402</span>
+            </div>
         
-        <div class="meeting-container">
-            <div class="meeting-info">
-                <div class="meeting-header">
-                    <i class="fas fa-handshake"></i>
-                    <p>Schedule a quick chat about collaborations or opportunities</p>
-                </div>
-                <div class="meeting-options">
-                    <div class="meeting-option">
-                        <i class="far fa-clock"></i>
-                        <span>30 min</span>
-                    </div>
-                    <div class="meeting-option">
-                        <i class="fas fa-video"></i>
-                        <span>Google Meet</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Calendly inline widget -->
-            <div class="calendly-inline-widget" 
-                 data-url="https://calendly.com/mithilgaonkar01/30min"
-                 style="min-width:320px;height:450px;">
-            </div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          </div>
         </div>
+  
+        <!-- Google Calendar Appointment Scheduling -->
+        <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ09it-9HjRdO3yD8Pv8USoWqxfu5-5h4q_Ox-9DhibLr2UoX3HrTXdot87I8r4BqsGPaMGeub_b?gv=true"
+                style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+      </div>
     </div>
+  </section>
+  
+<footer style="text-align: center; padding: 2rem 0; margin-top: 3rem; border-top: 1px solid #eee;">
+<div class="footer-content">
+<p style="color: #666; font-size: 0.9rem;">
+         © 2024 Priyadharshan Manohar. All Rights Reserved.
+        </p>
+</div>
+</footer>
 </section>
-    
-                    
-                    <footer style="text-align: center; padding: 2rem 0; margin-top: 3rem; border-top: 1px solid #eee;">
-                        <div class="footer-content">
-                        <p style="color: #666; font-size: 0.9rem;">
-                            © 2024 Mithil Gaonkar. All Rights Reserved.
-                         </p>
-                        </div>
-                    </footer>
-            </div>
-        </div>
-    </div>
-
-   <!-- Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</div>
+</div>
+</div>
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+</script>
 <script>
-    // Enhanced Menu Toggle with Animation
+   // Enhanced Menu Toggle with Animation
     document.querySelector('.menu-toggle').addEventListener('click', function() {
         const sidebar = document.querySelector('#sidebar');
         sidebar.classList.toggle('active');
@@ -2186,6 +2187,58 @@ Optimized retrieval pipeline with scalar quantization and HNSW indexing in Qdran
         }
     `;
     document.head.appendChild(style);
-</script>
-</body>
+  </script>
+<script>
+    
+    const swipers = document.querySelectorAll('.swiper');
+    swipers.forEach((el) => {
+      new Swiper(el, {
+        loop: true,
+        pagination: {
+          el: el.querySelector('.swiper-pagination'),
+          clickable: true,
+        },
+        navigation: {
+          nextEl: el.querySelector('.swiper-button-next'),
+          prevEl: el.querySelector('.swiper-button-prev'),
+        },
+      });
+    });
+  
+    
+  </script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- GLightbox JS -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- GLightbox JS -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const swipers = document.querySelectorAll('.swiper');
+  swipers.forEach((el) => {
+    new Swiper(el, {
+      loop: true,
+      pagination: {
+        el: el.querySelector('.swiper-pagination'),
+        clickable: true,
+      },
+      navigation: {
+        nextEl: el.querySelector('.swiper-button-next'),
+        prevEl: el.querySelector('.swiper-button-prev'),
+      },
+    });
+  });
+
+  const lightbox = GLightbox({
+    selector: '.glightbox',
+    width: '70vw',
+    height: '80vh',
+    zoomable: true,
+    closeButton: true,
+  });
+});
+</script></body>
 </html>
